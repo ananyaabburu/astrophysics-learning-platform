@@ -2,40 +2,398 @@
 <html>
 
 <head>
-    <title>Stars</title>
+    <meta charset="UTF-8">
+    <title>Module 1: Stars | Astrophysics Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+.course-layout {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 24px;
+    width: 94%;
+    max-width: 1200px;
+    margin: 28px auto;
+}
+
+.sidebar {
+    width: 250px !important;
+    min-width: 250px;
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar a {
+    display: block !important;
+    padding: 8px 10px;
+    margin: 6px 0;
+    color: #22314d;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background: #edf4ff;
+}
+
+.content {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    padding: 34px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.lesson-image {
+    display: block;
+    max-width: 420px !important;
+    width: 65% !important;
+    height: auto;
+    margin: 18px auto 6px;
+    border-radius: 10px;
+}
+
+@media (max-width: 850px) {
+    .course-layout {
+        display: block !important;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Stars</h1>
+<nav class="top-nav">
+    <div class="brand">Astrophysics Learning Platform</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="starsquiz.html">Quiz</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+</nav>
 
-    <p>
-        Stars are massive balls of hot gas that produce energy through nuclear fusion. They are the building blocks of galaxies and play an important role in the universe.
-    </p>
+<div class="course-layout">
 
-    <h2>How Do Stars Produce Energy?</h2>
+    <aside class="sidebar">
+        <h2>Module 1: Stars</h2>
+        <a href="#overview">Overview</a>
+        <a href="#lesson1">1. What is a Star?</a>
+        <a href="#lesson2">2. Stellar Structure</a>
+        <a href="#lesson3">3. Nuclear Fusion</a>
+        <a href="#lesson4">4. Hydrostatic Equilibrium</a>
+        <a href="#lesson5">5. Stellar Classification</a>
+        <a href="#lesson6">6. Stellar Evolution</a>
+        <a href="#research">Real Research</a>
+        <a href="#videos">Videos</a>
+        <a href="#resources">Resources</a>
+        <a class="quiz-link" href="starsquiz.html">Take Module Quiz</a>
+    </aside>
 
-    <p>
-        Inside a star's core, hydrogen atoms combine to form helium. This process releases enormous amounts of heat and light.
-    </p>
+    <main class="content">
 
-    <h2>Life Cycle of a Star</h2>
+        <section class="hero" id="overview">
+            <h1>Module 1: Stars</h1>
+            <p>
+                Stars are not just bright objects in the night sky. They are self-gravitating systems of plasma
+                that produce energy through nuclear fusion, shape the structure of galaxies, and create many of the
+                chemical elements needed for planets and life.
+            </p>
+        </section>
 
-    <p>
-        Stars are born in clouds of gas and dust, spend most of their lives producing energy, and eventually evolve into different objects depending on their mass.
-    </p>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Estimated Time</h3>
+                <p>35–45 minutes</p>
+            </div>
+            <div class="info-card">
+                <h3>Difficulty</h3>
+                <p>High School / Introductory College</p>
+            </div>
+            <div class="info-card">
+                <h3>Prerequisites</h3>
+                <p>Basic atoms, gravity, energy, and light</p>
+            </div>
+        </div>
 
-    <h2>Interesting Facts</h2>
+        <section class="callout">
+            <h2>Learning Objectives</h2>
+            <p>By the end of this module, you should be able to:</p>
+            <ul>
+                <li>Explain what a star is using concepts such as plasma, gravity, and radiation.</li>
+                <li>Describe the major internal layers of a Sun-like star.</li>
+                <li>Explain how nuclear fusion converts mass into energy.</li>
+                <li>Define hydrostatic equilibrium and explain why stars remain stable.</li>
+                <li>Use spectral class, temperature, and luminosity to compare stars.</li>
+                <li>Explain why a star's mass strongly controls its lifetime and final stage.</li>
+            </ul>
+        </section>
 
-    <ul>
-        <li>The Sun is a star.</li>
-        <li>Some stars are hundreds of times larger than the Sun.</li>
-        <li>Stars can live for billions of years.</li>
-    </ul>
+        <section id="lesson1">
+            <h2>Lesson 1 — What is a Star?</h2>
+            <p>
+                A star is a massive sphere of <b>plasma</b> held together by its own gravity. Plasma is a state of matter
+                in which atoms are so hot that electrons separate from nuclei, creating a gas of charged particles.
+                Stars are different from planets because stars generate their own energy, while planets mostly reflect
+                light from stars.
+            </p>
 
-    <a href="index.html">Back to Home</a>
+            <p>
+                The most important feature of a star is that it can sustain <b>nuclear fusion</b> in its core.
+                In main-sequence stars like the Sun, hydrogen nuclei fuse into helium. This process releases energy,
+                which eventually escapes as light and heat. That is why stars shine.
+            </p>
+
+            <img class="lesson-image"
+                 src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001982/GSFC_20171208_Archive_e001982~orig.jpg"
+                 alt="The Sun observed by NASA">
+            <p class="caption">Image credit: NASA Goddard Space Flight Center</p>
+
+            <div class="warning-callout">
+                <b>Key idea:</b> A star is not simply "burning" like a fire. A fire is a chemical reaction, but stars
+                are powered by nuclear reactions in their cores.
+            </div>
+        </section>
+
+        <section id="lesson2">
+            <h2>Lesson 2 — Stellar Structure</h2>
+            <p>
+                Although a star may look like a glowing disk from Earth, its interior has layers. These layers exist
+                because temperature, density, and pressure change dramatically from the core to the surface.
+            </p>
+
+            <h3>Core</h3>
+            <p>
+                The core is the central region where temperature and pressure are high enough for nuclear fusion.
+                In the Sun, the core reaches about 15 million Kelvin. Fusion in the core produces the energy that powers
+                the rest of the star.
+            </p>
+
+            <h3>Radiative Zone</h3>
+            <p>
+                Outside the core is the radiative zone. In this region, energy travels outward mainly through radiation.
+                Photons are repeatedly absorbed and re-emitted by particles, so it can take a very long time for energy
+                produced in the core to move outward.
+            </p>
+
+            <h3>Convective Zone</h3>
+            <p>
+                In the convective zone, energy is transported by moving plasma. Hot plasma rises, cools near the surface,
+                and sinks again. This is similar to convection in boiling water, but it happens on an enormous scale.
+            </p>
+
+            <h3>Photosphere, Chromosphere, and Corona</h3>
+            <p>
+                The photosphere is the visible "surface" of the star. Above it are the chromosphere and corona,
+                which form parts of the star's atmosphere. The Sun's corona is visible during a total solar eclipse.
+            </p>
+        </section>
+
+        <section id="lesson3">
+            <h2>Lesson 3 — Nuclear Fusion</h2>
+            <p>
+                Nuclear fusion is the process that powers stars. In the Sun, the dominant fusion process is the
+                <b>proton-proton chain</b>. Four hydrogen nuclei eventually combine to form one helium nucleus,
+                releasing energy in the process.
+            </p>
+
+            <p>
+                Fusion releases energy because the final helium nucleus has slightly less mass than the original
+                hydrogen nuclei. The missing mass is converted into energy according to Einstein's equation:
+                <b>E = mc²</b>. Because the speed of light is extremely large, even a tiny amount of converted mass
+                produces a huge amount of energy.
+            </p>
+
+            <div class="callout">
+                <h3>Why does fusion require extreme conditions?</h3>
+                <p>
+                    Hydrogen nuclei are positively charged, so they repel each other. Fusion can only occur when
+                    temperature and pressure are high enough for nuclei to overcome this repulsion and get close enough
+                    for the strong nuclear force to bind them together.
+                </p>
+            </div>
+
+            <p>
+                More massive stars often use the <b>CNO cycle</b> more efficiently than the Sun. The CNO cycle also
+                converts hydrogen into helium, but it uses carbon, nitrogen, and oxygen as catalysts. This process becomes
+                important at higher core temperatures.
+            </p>
+        </section>
+
+        <section id="lesson4">
+            <h2>Lesson 4 — Hydrostatic Equilibrium</h2>
+            <p>
+                A stable star is in <b>hydrostatic equilibrium</b>. This means that the inward pull of gravity is balanced
+                by outward pressure from hot gas and radiation produced by fusion. If gravity were stronger, the star would
+                collapse inward. If outward pressure were stronger, the star would expand.
+            </p>
+
+            <p>
+                This balance is not static in the sense of "nothing happening." Fusion, gravity, radiation, and particle
+                motion are constantly interacting. But on large scales, the forces balance well enough that a star like
+                the Sun can remain stable for billions of years.
+            </p>
+
+            <div class="callout">
+                <b>Important:</b> Hydrostatic equilibrium explains why stars do not immediately collapse under gravity
+                and why they do not explode outward during most of their lives.
+            </div>
+        </section>
+
+        <section id="lesson5">
+            <h2>Lesson 5 — Stellar Classification</h2>
+            <p>
+                Astronomers classify stars by their spectra, temperature, color, and luminosity. The main spectral
+                sequence is <b>O, B, A, F, G, K, M</b>. O-type stars are the hottest and bluest, while M-type stars are
+                the coolest and reddest.
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Spectral Class</th>
+                        <th>Approximate Color</th>
+                        <th>Approximate Temperature</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>O</td>
+                        <td>Blue</td>
+                        <td>Over 30,000 K</td>
+                        <td>Zeta Puppis</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>Blue-white</td>
+                        <td>10,000–30,000 K</td>
+                        <td>Rigel</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>White</td>
+                        <td>7,500–10,000 K</td>
+                        <td>Sirius A</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>Yellow-white</td>
+                        <td>6,000–7,500 K</td>
+                        <td>Procyon A</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>Yellow</td>
+                        <td>5,200–6,000 K</td>
+                        <td>The Sun</td>
+                    </tr>
+                    <tr>
+                        <td>K</td>
+                        <td>Orange</td>
+                        <td>3,700–5,200 K</td>
+                        <td>Arcturus</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>Red</td>
+                        <td>Below 3,700 K</td>
+                        <td>Proxima Centauri</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>
+                The <b>Hertzsprung–Russell diagram</b>, or H-R diagram, plots stars by luminosity and temperature.
+                It is one of the most important tools in astronomy because it reveals patterns in stellar evolution.
+            </p>
+        </section>
+
+        <section id="lesson6">
+            <h2>Lesson 6 — Stellar Evolution</h2>
+            <p>
+                A star's life cycle is controlled mainly by its initial mass. More massive stars have more fuel, but they
+                burn that fuel much faster because their cores are hotter and fusion occurs at a much higher rate.
+                Therefore, massive stars have much shorter lifetimes than low-mass stars.
+            </p>
+
+            <h3>Low and Sun-like Stars</h3>
+            <p>
+                Stars similar to the Sun spend most of their lives on the main sequence. When hydrogen in the core runs
+                low, the star expands into a red giant. Eventually, it sheds its outer layers, forming a planetary nebula.
+                The remaining core becomes a white dwarf.
+            </p>
+
+            <h3>Massive Stars</h3>
+            <p>
+                Massive stars can fuse heavier elements in their cores. When fusion reaches iron, energy production can no
+                longer support the star. The core collapses, and the outer layers explode in a supernova. The remaining
+                core may become a neutron star or black hole.
+            </p>
+
+            <img class="lesson-image"
+                 src="https://images-assets.nasa.gov/image/PIA14417/PIA14417~orig.jpg"
+                 alt="Supernova remnant Cassiopeia A">
+            <p class="caption">Image credit: NASA/JPL-Caltech. Cassiopeia A, the remains of an exploded massive star.</p>
+        </section>
+
+        <section id="research">
+            <h2>Real Research Connections</h2>
+            <p>
+                Modern stellar astronomy uses telescopes, satellites, spectroscopy, and computer simulations to study how
+                stars form, evolve, and influence galaxies.
+            </p>
+
+            <ul>
+                <li><b>Hubble Space Telescope:</b> Observes star-forming regions and stellar remnants in visible and ultraviolet light.</li>
+                <li><b>James Webb Space Telescope:</b> Uses infrared light to study young stars hidden inside dust clouds.</li>
+                <li><b>ESA Gaia Mission:</b> Measures positions, distances, and motions of over a billion stars.</li>
+                <li><b>Athena X-ray Observatory:</b> A future mission designed to study high-energy astrophysical processes.</li>
+            </ul>
+        </section>
+
+        <section id="videos">
+            <h2>Recommended Videos</h2>
+            <div class="video-list">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=PM9CQDlQI0A" target="_blank">Crash Course Astronomy: Stars</a></li>
+                    <li><a href="https://www.youtube.com/@NASA" target="_blank">NASA YouTube Channel</a></li>
+                    <li><a href="https://www.youtube.com/@pbsspacetime" target="_blank">PBS Space Time</a></li>
+                    <li><a href="https://www.youtube.com/@kurzgesagt" target="_blank">Kurzgesagt Space Videos</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>External Resources</h2>
+            <div class="resource-list">
+                <ul>
+                    <li><a href="https://science.nasa.gov/universe/stars/" target="_blank">NASA — Stars</a></li>
+                    <li><a href="https://science.nasa.gov/sun/" target="_blank">NASA — The Sun</a></li>
+                    <li><a href="https://openstax.org/books/astronomy-2e/pages/18-introduction" target="_blank">OpenStax Astronomy — The Stars</a></li>
+                    <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Gaia" target="_blank">ESA — Gaia Mission</a></li>
+                    <li><a href="https://esahubble.org/" target="_blank">ESA/Hubble</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="button-row">
+            <a class="button secondary-button" href="index.html">Return to Homepage</a>
+            <a class="button" href="starsquiz.html">Take Stars Module Quiz</a>
+        </div>
+
+    </main>
+
+</div>
 
 </body>
-
 </html>

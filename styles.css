@@ -1,27 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f5f7ff;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3fb;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+.top-nav {
+    background: #0b2d66;
+    color: white;
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.course-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    width: 94%;
+    max-width: 1250px;
+    margin: 28px auto;
+}
+
+.sidebar {
+    background: white;
+    border-radius: 14px;
     padding: 20px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 12px;
+    margin: 6px 0;
+    color: #22314d;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background: #edf4ff;
+}
+
+.quiz-link {
+    background: #123a7d;
+    color: white !important;
+    text-align: center;
+    margin-top: 18px !important;
+}
+
+.content {
+    background: white;
+    border-radius: 14px;
+    padding: 34px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.08);
+}
+
+.hero {
+    background: linear-gradient(135deg, #0b2d66, #285cc4);
+    color: white;
+    padding: 34px;
+    border-radius: 14px;
 }
 
 h1 {
-    color: navy;
+    color: #0b2d66;
+}
+
+.hero h1 {
+    color: white;
 }
 
 h2 {
+    color: #123a7d;
+    border-bottom: 2px solid #d7e5ff;
+    padding-bottom: 8px;
+    margin-top: 42px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.info-card, .callout, .warning-callout, .resource-list {
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.info-card {
+    background: #f5f8ff;
+    border: 1px solid #d8e6ff;
+}
+
+.callout {
+    background: #edf4ff;
+    border-left: 6px solid #2f6fdd;
+}
+
+.warning-callout {
+    background: #fff7ed;
+    border-left: 6px solid #f59e0b;
+}
+
+.lesson-image {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    margin: 24px auto 8px;
+    border-radius: 12px;
+}
+
+.caption {
+    text-align: center;
+    color: #5b6472;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #123a7d;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #d7e5ff;
+    padding: 11px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
     margin-top: 30px;
-    color: #333;
 }
 
-button {
-    padding: 8px 12px;
-    margin-top: 10px;
+.button {
+    background: #123a7d;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary-button {
+    background: #e7efff;
+    color: #123a7d;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    padding: 12px;
+    background: white;
+    border: 1px solid #d7e5ff;
+    border-radius: 10px;
+}
+
+.option input {
+    width: auto;
+    margin: 0;
+}
+
+.feedback {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 10px;
+    display: none;
+}
+
+.feedback.correct {
+    background: #ecfdf3;
+    border-left: 5px solid #16a34a;
+}
+
+.feedback.incorrect {
+    background: #fff1f2;
+    border-left: 5px solid #dc2626;
+}
+
+@media (max-width: 850px) {
+    .course-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Better quiz answer layout */
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    background: white;
+    border: 1px solid #d7e5ff;
+    border-radius: 10px;
     cursor: pointer;
+    text-align: left;
+    font-weight: normal;
 }
 
-input {
-    padding: 8px;
-    width: 250px;
+.option input[type="radio"] {
+    width: auto;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.option:hover {
+    background: #edf4ff;
+    border-color: #8bb7ff;
+}
+
+.question {
+    text-align: left;
 }

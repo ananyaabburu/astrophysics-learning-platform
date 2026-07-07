@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stars Quiz | Astrophysics Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    text-align: left !important;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+}
+
+.quiz-container h1,
+.quiz-container > p {
+    text-align: center;
+}
+
+.option {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 12px 14px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #d7e5ff !important;
+    border-radius: 10px !important;
+    background: white !important;
+    text-align: left !important;
+}
+
+.option input[type="radio"] {
+    margin-top: 5px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+}
+
+.question {
+    text-align: left !important;
+    margin-bottom: 24px !important;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+    <div class="brand">Astrophysics Learning Platform</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars Lesson</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+</nav>
+
+<div class="quiz-container">
+
+<h1>Stars Module Quiz</h1>
+
+<p>
+This quiz checks your understanding of stellar structure, fusion, hydrostatic equilibrium, spectral classification,
+and stellar evolution. After submitting, you will receive feedback and suggested lessons to revisit.
+</p>
+
+<form id="starsQuiz">
+
+    <div class="question">
+        <p>1. Why are stars classified as plasma rather than ordinary gas?</p>
+        <label class="option"><input type="radio" name="q1" value="A"> A. They are made only of electrons.</label>
+        <label class="option"><input type="radio" name="q1" value="B"> B. Their atoms are hot enough that many electrons are separated from nuclei.</label>
+        <label class="option"><input type="radio" name="q1" value="C"> C. They contain no hydrogen.</label>
+        <label class="option"><input type="radio" name="q1" value="D"> D. They are colder than most gases.</label>
+        <div id="feedback-q1" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>2. Which region of a Sun-like star is directly responsible for producing energy through fusion?</p>
+        <label class="option"><input type="radio" name="q2" value="A"> A. Photosphere</label>
+        <label class="option"><input type="radio" name="q2" value="B"> B. Corona</label>
+        <label class="option"><input type="radio" name="q2" value="C"> C. Core</label>
+        <label class="option"><input type="radio" name="q2" value="D"> D. Convective zone</label>
+        <div id="feedback-q2" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>3. Hydrostatic equilibrium in a stable star is best described as a balance between:</p>
+        <label class="option"><input type="radio" name="q3" value="A"> A. Gravity pulling inward and pressure pushing outward.</label>
+        <label class="option"><input type="radio" name="q3" value="B"> B. Temperature and color.</label>
+        <label class="option"><input type="radio" name="q3" value="C"> C. Magnetic fields and rotation only.</label>
+        <label class="option"><input type="radio" name="q3" value="D"> D. Luminosity and distance from Earth.</label>
+        <div id="feedback-q3" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>4. Why do more massive main-sequence stars usually have shorter lifetimes than lower-mass stars?</p>
+        <label class="option"><input type="radio" name="q4" value="A"> A. They contain less hydrogen fuel.</label>
+        <label class="option"><input type="radio" name="q4" value="B"> B. Their higher core temperatures cause fusion to occur much faster.</label>
+        <label class="option"><input type="radio" name="q4" value="C"> C. They are unable to form helium.</label>
+        <label class="option"><input type="radio" name="q4" value="D"> D. Their gravity is too weak to support fusion.</label>
+        <div id="feedback-q4" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>5. Which spectral class corresponds to the hottest stars?</p>
+        <label class="option"><input type="radio" name="q5" value="A"> A. M</label>
+        <label class="option"><input type="radio" name="q5" value="B"> B. G</label>
+        <label class="option"><input type="radio" name="q5" value="C"> C. K</label>
+        <label class="option"><input type="radio" name="q5" value="D"> D. O</label>
+        <div id="feedback-q5" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>6. The Sun is classified as which type of star?</p>
+        <label class="option"><input type="radio" name="q6" value="A"> A. O-type blue supergiant</label>
+        <label class="option"><input type="radio" name="q6" value="B"> B. G-type main sequence star</label>
+        <label class="option"><input type="radio" name="q6" value="C"> C. M-type red dwarf</label>
+        <label class="option"><input type="radio" name="q6" value="D"> D. White dwarf</label>
+        <div id="feedback-q6" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>7. Which statement best explains why fusion releases energy inside stars?</p>
+        <label class="option"><input type="radio" name="q7" value="A"> A. Fusion destroys gravity.</label>
+        <label class="option"><input type="radio" name="q7" value="B"> B. Some mass is converted into energy during nuclear reactions.</label>
+        <label class="option"><input type="radio" name="q7" value="C"> C. Fusion turns helium back into hydrogen.</label>
+        <label class="option"><input type="radio" name="q7" value="D"> D. Fusion only reflects sunlight.</label>
+        <div id="feedback-q7" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>8. On an H-R diagram, stars in the upper-right region are generally:</p>
+        <label class="option"><input type="radio" name="q8" value="A"> A. Hot and dim.</label>
+        <label class="option"><input type="radio" name="q8" value="B"> B. Hot and bright.</label>
+        <label class="option"><input type="radio" name="q8" value="C"> C. Cool and bright.</label>
+        <label class="option"><input type="radio" name="q8" value="D"> D. Cool and dim.</label>
+        <div id="feedback-q8" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>9. What is the likely final remnant of a Sun-like star?</p>
+        <label class="option"><input type="radio" name="q9" value="A"> A. White dwarf</label>
+        <label class="option"><input type="radio" name="q9" value="B"> B. Neutron star</label>
+        <label class="option"><input type="radio" name="q9" value="C"> C. Black hole</label>
+        <label class="option"><input type="radio" name="q9" value="D"> D. Quasar</label>
+        <div id="feedback-q9" class="feedback"></div>
+    </div>
+
+    <div class="question">
+        <p>10. Why does fusion not occur throughout the entire Sun?</p>
+        <label class="option"><input type="radio" name="q10" value="A"> A. Only the core reaches the necessary temperature and pressure.</label>
+        <label class="option"><input type="radio" name="q10" value="B"> B. The surface contains no hydrogen.</label>
+        <label class="option"><input type="radio" name="q10" value="C"> C. Fusion requires oxygen from the atmosphere.</label>
+        <label class="option"><input type="radio" name="q10" value="D"> D. Fusion can only occur outside stars.</label>
+        <div id="feedback-q10" class="feedback"></div>
+    </div>
+
+</form>
+
+<button class="submit-btn" onclick="gradeStarsQuiz()">Submit Quiz</button>
+
+<div id="scoreBox" class="score-box"></div>
+
+<div class="button-row">
+    <a class="button secondary-button" href="stars.html">Review Stars Module</a>
+    <a class="button" href="blackholes.html">Continue to Black Holes</a>
+</div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
