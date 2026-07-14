@@ -3,26 +3,696 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Athena</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <title>Athena X-ray Observatory | Astrophysics Learning Platform</title>
+
+    <link rel="stylesheet" href="styles.css?v=99">
+
+    <style>
+
+        .course-layout {
+            display: flex !important;
+            align-items: flex-start;
+            gap: 24px;
+            width: 94%;
+            max-width: 1200px;
+            margin: 28px auto;
+        }
+
+        .sidebar {
+            width: 250px !important;
+            min-width: 250px;
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar a {
+            display: block !important;
+            padding: 8px 10px;
+            margin: 6px 0;
+            color: #22314d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background: #edf4ff;
+        }
+
+        .content {
+            flex: 1;
+            background: white;
+            border-radius: 14px;
+            padding: 34px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-card {
+            background: #f3f7ff;
+            border-left: 5px solid #456ee8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        .science-card {
+            background: #f7f9ff;
+            border: 1px solid #d7e5ff;
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .lesson-image {
+            display: block;
+            width: 70% !important;
+            max-width: 500px !important;
+            height: auto;
+            margin: 20px auto 8px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 850px) {
+
+            .course-layout {
+                display: block !important;
+            }
+
+            .sidebar {
+                width: auto !important;
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .science-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-image {
+                width: 100% !important;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Athena</h1>
 
-    <p>
-        Athena is a computational code used in astrophysics research.
-    </p>
+<nav class="top-nav">
 
-    <p>
-        Scientists use Athena to study phenomena such as
-        star formation, magnetohydrodynamics, and accretion flows.
-    </p>
+    <div class="brand">
+        Astrophysics Learning Platform
+    </div>
 
-    <a href="index.html">
-        Back to Home
-    </a>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+
+</nav>
+
+
+<div class="course-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Athena</h2>
+
+        <a href="#overview">Overview</a>
+
+        <a href="#lesson1">
+            1. What Is Athena?
+        </a>
+
+        <a href="#lesson2">
+            2. Why X-rays?
+        </a>
+
+        <a href="#lesson3">
+            3. Black Holes
+        </a>
+
+        <a href="#lesson4">
+            4. Hot Gas and Galaxies
+        </a>
+
+        <a href="#lesson5">
+            5. Scientific Instruments
+        </a>
+
+        <a href="#lesson6">
+            6. Why Athena Matters
+        </a>
+
+        <a href="#connections">
+            Learning Connections
+        </a>
+
+        <a href="#resources">
+            External Resources
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+
+        <!-- OVERVIEW -->
+
+        <section id="overview">
+
+            <h1>
+                Research Tool: Athena X-ray Observatory
+            </h1>
+
+            <p>
+                Athena, the Advanced Telescope for High-ENergy
+                Astrophysics, is a planned European Space Agency
+                X-ray observatory designed to investigate some of
+                the hottest and most energetic environments in the
+                universe.
+            </p>
+
+            <p>
+                Unlike ordinary optical telescopes, Athena is designed
+                to observe X-rays produced by phenomena such as matter
+                falling toward black holes, extremely hot gas between
+                galaxies, stellar explosions, and other high-energy
+                astrophysical processes.
+            </p>
+
+        </section>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>Type</h3>
+
+                <p>
+                    Space-based X-ray observatory
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>Organization</h3>
+
+                <p>
+                    European Space Agency
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>Research Areas</h3>
+
+                <p>
+                    Black holes, galaxy clusters, hot gas,
+                    and cosmic evolution
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- LESSON 1 -->
+
+        <section id="lesson1">
+
+            <h2>
+                Lesson 1 — What Is Athena?
+            </h2>
+
+            <p>
+                Athena is designed to help astronomers study what is
+                sometimes called the hot and energetic universe. Many
+                of the most extreme objects in space produce large
+                amounts of X-ray radiation.
+            </p>
+
+            <p>
+                These objects include black holes actively consuming
+                surrounding matter, neutron stars, supernova remnants,
+                and enormous clouds of extremely hot gas inside galaxy
+                clusters.
+            </p>
+
+            <p>
+                Earth's atmosphere blocks most astronomical X-rays.
+                This protects life on Earth, but it also means that
+                X-ray observatories must operate above the atmosphere.
+                For that reason, Athena is designed as a space mission.
+            </p>
+
+            <div class="mission-card">
+
+                <strong>Key Idea:</strong>
+
+                Athena will not travel directly to black holes or
+                distant galaxies. Instead, it will collect and analyze
+                X-ray photons that have traveled across space.
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON 2 -->
+
+        <section id="lesson2">
+
+            <h2>
+                Lesson 2 — Why Study the Universe in X-rays?
+            </h2>
+
+            <p>
+                Human eyes detect only visible light, which represents
+                a small part of the electromagnetic spectrum.
+                Astronomers use different wavelengths to reveal
+                different physical processes.
+            </p>
+
+            <p>
+                X-rays are especially useful for observing matter at
+                extremely high temperatures and particles accelerated
+                to enormous energies.
+            </p>
+
+            <p>
+                For example, gas falling toward a black hole can form
+                an accretion disk. Friction, compression, turbulence,
+                and magnetic processes can heat this material to
+                millions of degrees, causing it to emit X-rays.
+            </p>
+
+            <h3>
+                What can X-ray observations reveal?
+            </h3>
+
+            <ul>
+
+                <li>
+                    The temperature and composition of extremely hot gas.
+                </li>
+
+                <li>
+                    The behavior of matter near black holes.
+                </li>
+
+                <li>
+                    The aftermath of supernova explosions.
+                </li>
+
+                <li>
+                    The distribution of hot matter inside galaxy clusters.
+                </li>
+
+                <li>
+                    The growth of supermassive black holes over cosmic time.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- LESSON 3 -->
+
+        <section id="lesson3">
+
+            <h2>
+                Lesson 3 — Studying Black Holes with Athena
+            </h2>
+
+            <p>
+                A black hole itself does not emit light from inside its
+                event horizon. However, the material surrounding an
+                actively feeding black hole can become extraordinarily
+                luminous.
+            </p>
+
+            <p>
+                Gas spiraling inward forms an accretion disk. As the
+                gas loses energy and moves closer to the black hole,
+                it becomes extremely hot and may emit intense X-rays.
+            </p>
+
+            <p>
+                By analyzing this X-ray radiation, astronomers can study
+                the physical conditions near the black hole without
+                directly observing the black hole itself.
+            </p>
+
+            <h3>
+                Supermassive Black Holes
+            </h3>
+
+            <p>
+                Most large galaxies contain a supermassive black hole
+                near their centers. When these black holes actively
+                consume matter, they can power active galactic nuclei
+                that sometimes outshine all the stars in their host
+                galaxies.
+            </p>
+
+            <p>
+                Athena is intended to help scientists investigate how
+                these enormous black holes formed, how quickly they
+                grew, and how their energy influenced the evolution
+                of surrounding galaxies.
+            </p>
+
+        </section>
+
+
+        <!-- LESSON 4 -->
+
+        <section id="lesson4">
+
+            <h2>
+                Lesson 4 — Hot Gas, Galaxy Clusters, and Cosmic Structure
+            </h2>
+
+            <p>
+                Galaxies often exist in groups and clusters. Galaxy
+                clusters can contain hundreds or thousands of galaxies
+                held together by gravity.
+            </p>
+
+            <p>
+                Surprisingly, much of the ordinary matter in a galaxy
+                cluster is not contained inside the galaxies themselves.
+                Instead, enormous amounts of extremely hot gas fill the
+                space between galaxies.
+            </p>
+
+            <p>
+                This intracluster gas can reach temperatures of millions
+                of degrees and produce X-rays. By observing this emission,
+                astronomers can study the temperature, composition,
+                movement, and distribution of the gas.
+            </p>
+
+            <div class="mission-card">
+
+                <strong>Connection to cosmology:</strong>
+
+                Studying galaxy clusters helps scientists investigate
+                how large-scale cosmic structures formed and changed
+                throughout the history of the universe.
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON 5 -->
+
+        <section id="lesson5">
+
+            <h2>
+                Lesson 5 — Athena's Scientific Instruments
+            </h2>
+
+            <p>
+                Athena is designed to use advanced instruments that do
+                more than simply create pictures. These instruments
+                analyze X-ray photons to reveal information about the
+                objects that produced them.
+            </p>
+
+
+            <div class="science-grid">
+
+
+                <div class="science-card">
+
+                    <h3>
+                        X-ray Integral Field Unit
+                    </h3>
+
+                    <p>
+                        The X-ray Integral Field Unit, often abbreviated
+                        X-IFU, is designed for high-resolution X-ray
+                        spectroscopy.
+                    </p>
+
+                    <p>
+                        Spectroscopy separates radiation according to
+                        energy or wavelength. This allows scientists to
+                        investigate the chemical composition,
+                        temperature, density, and motion of hot cosmic gas.
+                    </p>
+
+                </div>
+
+
+                <div class="science-card">
+
+                    <h3>
+                        Wide Field Imager
+                    </h3>
+
+                    <p>
+                        The Wide Field Imager, or WFI, is designed to
+                        observe larger regions of the X-ray sky and study
+                        many energetic objects efficiently.
+                    </p>
+
+                    <p>
+                        It can help astronomers search for distant active
+                        galaxies, investigate black-hole growth, and
+                        observe high-energy cosmic environments.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON 6 -->
+
+        <section id="lesson6">
+
+            <h2>
+                Lesson 6 — Why Athena Matters
+            </h2>
+
+            <p>
+                Athena connects many major areas of modern astrophysics.
+                It can contribute to research on black holes, galaxies,
+                galaxy clusters, the intergalactic medium, and the
+                evolution of cosmic structure.
+            </p>
+
+            <p>
+                Its observations can help answer questions such as:
+            </p>
+
+            <ul>
+
+                <li>
+                    How did the earliest supermassive black holes form?
+                </li>
+
+                <li>
+                    How did black holes grow over billions of years?
+                </li>
+
+                <li>
+                    How do active black holes affect their host galaxies?
+                </li>
+
+                <li>
+                    Where is ordinary matter distributed throughout
+                    the universe?
+                </li>
+
+                <li>
+                    How did large galaxy clusters form and evolve?
+                </li>
+
+            </ul>
+
+            <p>
+                These questions connect directly to the Stars, Black
+                Holes, and Galaxies modules on this learning platform.
+                Athena demonstrates how the concepts learned in an
+                educational lesson become real research questions
+                investigated with advanced scientific instruments.
+            </p>
+
+        </section>
+
+
+        <!-- CONNECTIONS -->
+
+        <section id="connections">
+
+            <h2>
+                Connections to Your Learning Modules
+            </h2>
+
+
+            <div class="science-grid">
+
+
+                <div class="science-card">
+
+                    <h3>Stars</h3>
+
+                    <p>
+                        X-ray astronomy can reveal stellar explosions,
+                        supernova remnants, neutron stars, and energetic
+                        binary systems.
+                    </p>
+
+                    <a href="stars.html">
+                        Review Stars Module
+                    </a>
+
+                </div>
+
+
+                <div class="science-card">
+
+                    <h3>Black Holes</h3>
+
+                    <p>
+                        Athena can study hot accretion disks and energetic
+                        matter surrounding stellar and supermassive black holes.
+                    </p>
+
+                    <a href="blackholes.html">
+                        Review Black Holes Module
+                    </a>
+
+                </div>
+
+
+                <div class="science-card">
+
+                    <h3>Galaxies</h3>
+
+                    <p>
+                        Observations of active galactic nuclei and galaxy
+                        clusters can reveal how galaxies and their central
+                        black holes evolve together.
+                    </p>
+
+                    <a href="galaxies.html">
+                        Review Galaxies Module
+                    </a>
+
+                </div>
+
+
+                <div class="science-card">
+
+                    <h3>Research and Data</h3>
+
+                    <p>
+                        Athena demonstrates how astronomers use
+                        spectroscopy, imaging, and space telescopes to
+                        turn electromagnetic radiation into scientific data.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+
+        <section id="resources">
+
+            <h2>
+                External Resources
+            </h2>
+
+            <ul>
+
+                <li>
+                    European Space Agency — Athena Mission
+                </li>
+
+                <li>
+                    NASA — X-ray Astronomy
+                </li>
+
+                <li>
+                    ESA — The Hot and Energetic Universe
+                </li>
+
+                <li>
+                    OpenStax Astronomy — Astronomical Instruments
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="button-row">
+
+            <a
+                class="button secondary-button"
+                href="index.html"
+            >
+                Return to Homepage
+            </a>
+
+            <a
+                class="button"
+                href="tng.html"
+            >
+                Next Research Tool: IllustrisTNG
+            </a>
+
+        </div>
+
+
+    </main>
+
+</div>
+
 
 </body>
 

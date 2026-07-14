@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Black Holes Quiz | Astrophysics Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            text-align: left !important;
+        }
+
+        .quiz-container {
+            width: 90%;
+            max-width: 850px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-container h1,
+        .quiz-introduction {
+            text-align: center;
+        }
+
+        .question {
+            text-align: left !important;
+            margin-bottom: 24px;
+            padding: 20px;
+            border: 1px solid #d7e5ff;
+            border-radius: 12px;
+            background: #fbfdff;
+        }
+
+        .option {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+            width: 100% !important;
+            padding: 12px 14px !important;
+            margin: 10px 0 !important;
+            border: 1px solid #d7e5ff !important;
+            border-radius: 10px !important;
+            background: white !important;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .option:hover {
+            background: #edf4ff !important;
+        }
+
+        .option input[type="radio"] {
+            margin-top: 5px !important;
+            width: auto !important;
+            flex-shrink: 0 !important;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 14px 28px;
+            background: #123a7d;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .feedback {
+            display: none;
+            margin-top: 14px;
+            padding: 14px;
+            border-radius: 10px;
+        }
+
+        .feedback.correct {
+            background: #ecfdf3;
+            border-left: 5px solid #16a34a;
+        }
+
+        .feedback.incorrect {
+            background: #fff1f2;
+            border-left: 5px solid #dc2626;
+        }
+
+        .score-box {
+            display: none;
+            margin: 30px 0;
+            padding: 24px;
+            background: #edf4ff;
+            border-left: 6px solid #123a7d;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+    <div class="brand">Astrophysics Learning Platform</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+</nav>
+
+<div class="quiz-container">
+
+    <h1>Black Holes Module Quiz</h1>
+
+    <p class="quiz-introduction">
+        Test your understanding of black hole formation, anatomy, accretion,
+        relativity, detection methods, and gravitational waves.
+    </p>
+
+    <form id="blackHolesQuiz">
+
+        <div class="question">
+            <p><strong>1. According to general relativity, gravity is best described as:</strong></p>
+            <label class="option"><input type="radio" name="bh1" value="A"> A. A chemical force created by hot matter.</label>
+            <label class="option"><input type="radio" name="bh1" value="B"> B. The curvature of spacetime produced by mass and energy.</label>
+            <label class="option"><input type="radio" name="bh1" value="C"> C. A magnetic attraction between all objects.</label>
+            <label class="option"><input type="radio" name="bh1" value="D"> D. A force that only affects light.</label>
+            <div id="feedback-bh1" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>2. Why can the core of a massive star collapse after producing iron?</strong></p>
+            <label class="option"><input type="radio" name="bh2" value="A"> A. Iron immediately destroys gravity.</label>
+            <label class="option"><input type="radio" name="bh2" value="B"> B. Iron fusion does not release enough energy to support the core against gravity.</label>
+            <label class="option"><input type="radio" name="bh2" value="C"> C. Iron causes the star to instantly lose all of its mass.</label>
+            <label class="option"><input type="radio" name="bh2" value="D"> D. Iron prevents the star from producing visible light.</label>
+            <div id="feedback-bh2" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>3. What is the event horizon?</strong></p>
+            <label class="option"><input type="radio" name="bh3" value="A"> A. A solid physical surface surrounding the black hole.</label>
+            <label class="option"><input type="radio" name="bh3" value="B"> B. The visible outer edge of an accretion disk.</label>
+            <label class="option"><input type="radio" name="bh3" value="C"> C. The boundary beyond which information cannot return to a distant observer.</label>
+            <label class="option"><input type="radio" name="bh3" value="D"> D. A region where nearby stars stop moving.</label>
+            <div id="feedback-bh3" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>4. Which type of black hole is commonly found at the center of a large galaxy?</strong></p>
+            <label class="option"><input type="radio" name="bh4" value="A"> A. White dwarf</label>
+            <label class="option"><input type="radio" name="bh4" value="B"> B. Stellar-mass black hole</label>
+            <label class="option"><input type="radio" name="bh4" value="C"> C. Supermassive black hole</label>
+            <label class="option"><input type="radio" name="bh4" value="D"> D. Neutron star</label>
+            <div id="feedback-bh4" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>5. Why can an accretion disk around a black hole become extremely bright?</strong></p>
+            <label class="option"><input type="radio" name="bh5" value="A"> A. Matter is heated by friction, turbulence, compression, and magnetic interactions.</label>
+            <label class="option"><input type="radio" name="bh5" value="B"> B. Light escapes directly from the singularity.</label>
+            <label class="option"><input type="radio" name="bh5" value="C"> C. The event horizon reflects all incoming light.</label>
+            <label class="option"><input type="radio" name="bh5" value="D"> D. The disk is made entirely of burning oxygen.</label>
+            <div id="feedback-bh5" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>6. Relativistic jets are believed to originate from:</strong></p>
+            <label class="option"><input type="radio" name="bh6" value="A"> A. Inside the singularity.</label>
+            <label class="option"><input type="radio" name="bh6" value="B"> B. The accretion disk and magnetic environment surrounding the black hole.</label>
+            <label class="option"><input type="radio" name="bh6" value="C"> C. The solid surface of the black hole.</label>
+            <label class="option"><input type="radio" name="bh6" value="D"> D. Nuclear fusion inside the event horizon.</label>
+            <div id="feedback-bh6" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>7. Which observation can provide evidence for an invisible black hole?</strong></p>
+            <label class="option"><input type="radio" name="bh7" value="A"> A. Nearby stars orbiting an unseen massive object.</label>
+            <label class="option"><input type="radio" name="bh7" value="B"> B. The complete absence of gravity.</label>
+            <label class="option"><input type="radio" name="bh7" value="C"> C. A planet suddenly producing nuclear fusion.</label>
+            <label class="option"><input type="radio" name="bh7" value="D"> D. Stars permanently stopping all motion.</label>
+            <div id="feedback-bh7" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>8. What produces gravitational waves during a black-hole merger?</strong></p>
+            <label class="option"><input type="radio" name="bh8" value="A"> A. Chemical explosions inside the black holes.</label>
+            <label class="option"><input type="radio" name="bh8" value="B"> B. Disturbances in spacetime caused by accelerating massive objects.</label>
+            <label class="option"><input type="radio" name="bh8" value="C"> C. Ordinary sound waves traveling through space.</label>
+            <label class="option"><input type="radio" name="bh8" value="D"> D. Reflected visible light.</label>
+            <div id="feedback-bh8" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>9. From a distant observer's perspective, an object approaching an event horizon appears to:</strong></p>
+            <label class="option"><input type="radio" name="bh9" value="A"> A. Move faster than light.</label>
+            <label class="option"><input type="radio" name="bh9" value="B"> B. Slow down and become increasingly redshifted.</label>
+            <label class="option"><input type="radio" name="bh9" value="C"> C. Turn into antimatter.</label>
+            <label class="option"><input type="radio" name="bh9" value="D"> D. Instantly disappear without any change in its light.</label>
+            <div id="feedback-bh9" class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <p><strong>10. What causes spaghettification near a black hole?</strong></p>
+            <label class="option"><input type="radio" name="bh10" value="A"> A. Unequal gravitational forces acting across different parts of an object.</label>
+            <label class="option"><input type="radio" name="bh10" value="B"> B. Nuclear fusion occurring throughout the object's body.</label>
+            <label class="option"><input type="radio" name="bh10" value="C"> C. The object reaching absolute zero.</label>
+            <label class="option"><input type="radio" name="bh10" value="D"> D. The black hole emitting ordinary wind.</label>
+            <div id="feedback-bh10" class="feedback"></div>
+        </div>
+
+    </form>
+
+    <button class="submit-btn" type="button" onclick="gradeBlackHolesQuiz()">
+        Submit Quiz
+    </button>
+
+    <div id="blackHolesScoreBox" class="score-box"></div>
+
+    <div class="button-row">
+        <a class="button secondary-button" href="blackholes.html">
+            Review Black Holes Module
+        </a>
+
+        <a class="button" href="galaxies.html">
+            Continue to Galaxies
+        </a>
+    </div>
+
+</div>
+
+<script src="progress.js?v=1"></script>
+<script src="quiz.js?v=3"></script>
+
+</body>
+</html>

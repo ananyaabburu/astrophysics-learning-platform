@@ -3,39 +3,635 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Black Holes</title>
+    <title>Module 2: Black Holes | Astrophysics Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .course-layout {
+            display: flex !important;
+            align-items: flex-start;
+            gap: 24px;
+            width: 94%;
+            max-width: 1200px;
+            margin: 28px auto;
+        }
+
+        .sidebar {
+            width: 250px !important;
+            min-width: 250px;
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar a {
+            display: block !important;
+            padding: 8px 10px;
+            margin: 6px 0;
+            color: #22314d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background: #edf4ff;
+        }
+
+        .content {
+            flex: 1;
+            background: white;
+            border-radius: 14px;
+            padding: 34px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-image {
+            display: block;
+            width: 70% !important;
+            max-width: 480px !important;
+            height: auto;
+            margin: 20px auto 8px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 850px) {
+            .course-layout {
+                display: block !important;
+            }
+
+            .sidebar {
+                width: 100% !important;
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Black Holes</h1>
+<nav class="top-nav">
+    <div class="brand">Astrophysics Learning Platform</div>
 
-    <p>
-        A black hole is a region of space where gravity is so strong that nothing, not even light, can escape.
-    </p>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+</nav>
 
-    <h2>How Do Black Holes Form?</h2>
+<div class="course-layout">
 
-    <p>
-        Many black holes form when massive stars run out of fuel and collapse under their own gravity.
-    </p>
+    <aside class="sidebar">
+        <h2>Module 2: Black Holes</h2>
 
-    <h2>What is an Event Horizon?</h2>
+        <a href="#overview">Overview</a>
+        <a href="#lesson1">1. Gravity and Spacetime</a>
+        <a href="#lesson2">2. Black Hole Formation</a>
+        <a href="#lesson3">3. Black Hole Anatomy</a>
+        <a href="#lesson4">4. Types of Black Holes</a>
+        <a href="#lesson5">5. Accretion and Jets</a>
+        <a href="#lesson6">6. Detecting Black Holes</a>
+        <a href="#lesson7">7. Relativity and Time</a>
+        <a href="#research">Real Research</a>
+        <a href="#videos">Videos</a>
+        <a href="#resources">Resources</a>
 
-    <p>
-        The event horizon is the boundary surrounding a black hole. Once something crosses this boundary, it cannot escape.
-    </p>
+        <a class="quiz-link" href="blackholesquiz.html">
+            Take Module Quiz
+        </a>
+    </aside>
 
-    <h2>Interesting Facts</h2>
+    <main class="content">
 
-    <ul>
-        <li>The first image of a black hole was released in 2019.</li>
-        <li>Black holes can vary greatly in size.</li>
-        <li>Supermassive black holes exist at the centers of many galaxies.</li>
-    </ul>
+        <section class="hero" id="overview">
+            <h1>Module 2: Black Holes</h1>
 
-    <a href="index.html">Back to Home</a>
+            <p>
+                Black holes are regions of spacetime where gravity becomes so intense that,
+                beyond a boundary called the event horizon, no signal can return to the
+                outside universe. Studying black holes allows astronomers to test gravity,
+                relativity, stellar evolution, and the behavior of matter under extreme
+                physical conditions.
+            </p>
+        </section>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>Estimated Time</h3>
+                <p>40–50 minutes</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Difficulty</h3>
+                <p>High School / Introductory College</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Prerequisites</h3>
+                <p>Gravity, energy, light, and stellar evolution</p>
+            </div>
+
+        </div>
+
+        <section class="callout">
+
+            <h2>Learning Objectives</h2>
+
+            <p>After completing this module, you should be able to:</p>
+
+            <ul>
+                <li>Explain how gravity affects spacetime.</li>
+                <li>Describe how stellar-mass black holes form.</li>
+                <li>Distinguish between the event horizon, singularity, and accretion disk.</li>
+                <li>Compare stellar-mass, intermediate-mass, and supermassive black holes.</li>
+                <li>Explain how astronomers detect objects that do not emit visible light.</li>
+                <li>Describe gravitational time dilation near a black hole.</li>
+                <li>Explain how gravitational waves provide evidence of black-hole mergers.</li>
+            </ul>
+
+        </section>
+
+        <section id="lesson1">
+
+            <h2>Lesson 1 — Gravity and Spacetime</h2>
+
+            <p>
+                In Newtonian physics, gravity is described as a force of attraction between
+                objects with mass. Albert Einstein's general theory of relativity provides a
+                deeper description: mass and energy curve spacetime, and objects move along
+                paths determined by that curvature.
+            </p>
+
+            <p>
+                A massive object such as a star produces a noticeable curvature in spacetime.
+                A black hole represents an extreme case in which matter has become concentrated
+                into a sufficiently small region that spacetime is curved so strongly that all
+                future-directed paths inside the event horizon lead farther inward.
+            </p>
+
+            <div class="callout">
+                <h3>Escape Velocity</h3>
+
+                <p>
+                    Escape velocity is the minimum speed required to leave an object's
+                    gravitational influence without additional propulsion. As an object becomes
+                    more compact, its escape velocity increases. At a black hole's event horizon,
+                    the required escape velocity is equal to the speed of light.
+                </p>
+            </div>
+
+            <p>
+                This does not mean that light simply becomes too slow. Light always travels at
+                the speed of light locally. Instead, the geometry of spacetime inside the event
+                horizon prevents light from following a path back to the outside universe.
+            </p>
+
+        </section>
+
+        <section id="lesson2">
+
+            <h2>Lesson 2 — How Black Holes Form</h2>
+
+            <p>
+                Many stellar-mass black holes form during the deaths of massive stars. A star
+                remains stable for most of its life because outward pressure from fusion balances
+                inward gravity. When the star can no longer generate enough energy in its core,
+                gravity begins to dominate.
+            </p>
+
+            <h3>Core Collapse</h3>
+
+            <p>
+                Massive stars can fuse progressively heavier elements, including carbon, oxygen,
+                neon, silicon, and eventually iron. Fusion involving iron does not release enough
+                energy to support the star. The core therefore collapses rapidly.
+            </p>
+
+            <p>
+                The collapsing core may produce a neutron star. However, if the remaining core is
+                sufficiently massive, even neutron degeneracy pressure cannot stop the collapse.
+                The object may then form a black hole.
+            </p>
+
+            <h3>Direct Collapse</h3>
+
+            <p>
+                Some very massive stars may collapse into black holes with a weak explosion or no
+                ordinary supernova visible. Astronomers are still investigating how often this
+                direct-collapse process occurs.
+            </p>
+
+            <div class="warning-callout">
+                <b>Important:</b> Not every massive star automatically becomes a black hole.
+                Its final outcome depends on its initial mass, mass loss, chemical composition,
+                rotation, binary interactions, and the mass of the remaining core.
+            </div>
+
+        </section>
+
+        <section id="lesson3">
+
+            <h2>Lesson 3 — Anatomy of a Black Hole</h2>
+
+            <h3>Event Horizon</h3>
+
+            <p>
+                The event horizon is the boundary beyond which information cannot return to a
+                distant observer. It is not a solid surface. An observer crossing the event
+                horizon of a sufficiently large black hole might not notice anything unusual at
+                that exact moment.
+            </p>
+
+            <h3>Singularity</h3>
+
+            <p>
+                General relativity predicts that matter inside a black hole continues collapsing
+                toward a region of extremely high density known as a singularity. At the
+                singularity, the equations of classical general relativity stop providing a
+                complete physical description.
+            </p>
+
+            <p>
+                Many physicists expect that a future theory of quantum gravity will be needed to
+                explain what actually occurs in this region.
+            </p>
+
+            <h3>Schwarzschild Radius</h3>
+
+            <p>
+                For a nonrotating black hole, the radius of the event horizon is called the
+                Schwarzschild radius. It increases directly with the mass of the black hole.
+                More massive black holes have larger event horizons.
+            </p>
+
+            <h3>Photon Sphere</h3>
+
+            <p>
+                Outside the event horizon lies a region where gravity can bend light into
+                unstable circular paths. This region is associated with the photon sphere.
+                Small disturbances cause the light either to escape or fall inward.
+            </p>
+
+        </section>
+
+        <section id="lesson4">
+
+            <h2>Lesson 4 — Types of Black Holes</h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <tr>
+                        <th>Type</th>
+                        <th>Approximate Mass</th>
+                        <th>Possible Origin</th>
+                    </tr>
+
+                    <tr>
+                        <td>Stellar-Mass</td>
+                        <td>Several to tens of solar masses</td>
+                        <td>Collapse of massive stars</td>
+                    </tr>
+
+                    <tr>
+                        <td>Intermediate-Mass</td>
+                        <td>Hundreds to hundreds of thousands of solar masses</td>
+                        <td>Possible mergers or dense star clusters</td>
+                    </tr>
+
+                    <tr>
+                        <td>Supermassive</td>
+                        <td>Millions to billions of solar masses</td>
+                        <td>Growth through accretion and mergers</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <h3>Stellar-Mass Black Holes</h3>
+
+            <p>
+                Stellar-mass black holes are created from massive stars. Astronomers often find
+                them in binary systems where the black hole gravitationally interacts with a
+                nearby companion star.
+            </p>
+
+            <h3>Intermediate-Mass Black Holes</h3>
+
+            <p>
+                Intermediate-mass black holes may help explain how the first supermassive black
+                holes formed. Evidence for them exists, but they are harder to identify than
+                stellar or supermassive black holes.
+            </p>
+
+            <h3>Supermassive Black Holes</h3>
+
+            <p>
+                Most large galaxies appear to contain a supermassive black hole near their
+                centers. The Milky Way's central black hole, Sagittarius A*, has a mass of roughly
+                four million Suns.
+            </p>
+
+        </section>
+
+        <section id="lesson5">
+
+            <h2>Lesson 5 — Accretion Disks and Relativistic Jets</h2>
+
+            <p>
+                Black holes themselves do not emit light from inside their event horizons.
+                However, matter surrounding a black hole can become extremely luminous.
+            </p>
+
+            <h3>Accretion Disks</h3>
+
+            <p>
+                Gas and dust falling toward a black hole usually carry angular momentum, so they
+                do not fall directly inward. Instead, the material forms a rotating accretion
+                disk.
+            </p>
+
+            <p>
+                Friction, magnetic fields, and turbulence heat the disk to very high temperatures.
+                The disk may emit visible light, ultraviolet radiation, and X-rays before the
+                material crosses the event horizon.
+            </p>
+
+            <h3>Relativistic Jets</h3>
+
+            <p>
+                Some actively feeding black holes launch narrow jets of charged particles moving
+                close to the speed of light. These jets can extend thousands or even millions of
+                light-years from the galaxy.
+            </p>
+
+            <p>
+                The jets are not emitted from inside the black hole. They originate in the
+                surrounding disk and magnetic-field environment.
+            </p>
+
+            <img
+                class="lesson-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Black_hole_-_Messier_87_crop_max_res.jpg"
+                alt="Black hole in galaxy Messier 87"
+            >
+
+            <p class="caption">
+                The Event Horizon Telescope image of the supermassive black hole in Messier 87.
+                Credit: Event Horizon Telescope Collaboration.
+            </p>
+
+        </section>
+
+        <section id="lesson6">
+
+            <h2>Lesson 6 — How Astronomers Detect Black Holes</h2>
+
+            <p>
+                Because black holes do not emit visible light from within their event horizons,
+                astronomers usually detect them indirectly by observing their effects on nearby
+                matter, light, and spacetime.
+            </p>
+
+            <h3>Motion of Nearby Objects</h3>
+
+            <p>
+                Astronomers can observe stars orbiting an unseen massive object. Measurements of
+                orbital speed and distance can reveal the mass of the hidden object.
+            </p>
+
+            <p>
+                Observations of stars moving near the center of the Milky Way provided strong
+                evidence for Sagittarius A*.
+            </p>
+
+            <h3>X-Ray Emission</h3>
+
+            <p>
+                In binary systems, a black hole may pull matter from a companion star. The
+                material becomes extremely hot in the accretion disk and emits X-rays.
+            </p>
+
+            <h3>Gravitational Lensing</h3>
+
+            <p>
+                A black hole can bend light from a background object. This gravitational lensing
+                may temporarily magnify or distort the object's appearance.
+            </p>
+
+            <h3>Gravitational Waves</h3>
+
+            <p>
+                When two black holes orbit and merge, they disturb spacetime and release
+                gravitational waves. Detectors such as LIGO and Virgo measure tiny changes in
+                distance caused by these waves passing through Earth.
+            </p>
+
+        </section>
+
+        <section id="lesson7">
+
+            <h2>Lesson 7 — Relativity and Time Near a Black Hole</h2>
+
+            <p>
+                General relativity predicts that clocks run at different rates in regions with
+                different gravitational strengths. Near a black hole, time passes more slowly
+                relative to a distant observer. This is called gravitational time dilation.
+            </p>
+
+            <p>
+                From far away, an object approaching an event horizon appears to slow and become
+                increasingly redshifted. Light leaving the object loses energy while escaping the
+                strong gravitational field.
+            </p>
+
+            <p>
+                The falling observer experiences time normally according to their own clock and
+                can cross the event horizon in a finite amount of personal time.
+            </p>
+
+            <h3>Spaghettification</h3>
+
+            <p>
+                Gravity becomes stronger closer to a black hole. The difference in gravity
+                between the near and far sides of an object creates tidal forces. These forces
+                can stretch the object lengthwise and compress it sideways, a process informally
+                called spaghettification.
+            </p>
+
+            <div class="callout">
+                <b>Important:</b> The intensity of tidal forces at the event horizon depends on
+                the black hole's mass. At the horizon of a supermassive black hole, tidal forces
+                may initially be much weaker than at the horizon of a stellar-mass black hole.
+            </div>
+
+        </section>
+
+        <section id="research">
+
+            <h2>Real Research Connections</h2>
+
+            <ul>
+                <li>
+                    <b>Event Horizon Telescope:</b>
+                    A global network of radio observatories used to image the regions surrounding
+                    supermassive black holes.
+                </li>
+
+                <li>
+                    <b>LIGO, Virgo, and KAGRA:</b>
+                    Gravitational-wave observatories that detect mergers involving black holes
+                    and neutron stars.
+                </li>
+
+                <li>
+                    <b>Chandra X-Ray Observatory:</b>
+                    Studies high-energy radiation from accretion disks, jets, and black-hole
+                    environments.
+                </li>
+
+                <li>
+                    <b>James Webb Space Telescope:</b>
+                    Investigates distant galaxies and the growth of early supermassive black holes.
+                </li>
+
+                <li>
+                    <b>Athena:</b>
+                    A planned X-ray observatory intended to study hot gas and black-hole growth.
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="videos">
+
+            <h2>Recommended Videos</h2>
+
+            <div class="resource-list">
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/watch?v=qZWPBKULkdQ"
+                            target="_blank"
+                        >
+                            Crash Course Astronomy: Black Holes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@NASA"
+                            target="_blank"
+                        >
+                            NASA Video Resources
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@pbsspacetime"
+                            target="_blank"
+                        >
+                            PBS Space Time
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@veritasium"
+                            target="_blank"
+                        >
+                            Veritasium Physics Videos
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section id="resources">
+
+            <h2>External Resources</h2>
+
+            <div class="resource-list">
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://science.nasa.gov/universe/black-holes/"
+                            target="_blank"
+                        >
+                            NASA — Black Holes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://eventhorizontelescope.org/"
+                            target="_blank"
+                        >
+                            Event Horizon Telescope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.ligo.org/science/GW-BlackHoles.php"
+                            target="_blank"
+                        >
+                            LIGO — Black Holes and Gravitational Waves
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://openstax.org/books/astronomy-2e/pages/24-5-black-holes"
+                            target="_blank"
+                        >
+                            OpenStax Astronomy — Black Holes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://chandra.harvard.edu/xray_sources/blackholes.html"
+                            target="_blank"
+                        >
+                            Chandra X-Ray Observatory — Black Holes
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <div class="button-row">
+
+            <a class="button secondary-button" href="stars.html">
+                Previous Module: Stars
+            </a>
+
+            <a class="button" href="blackholesquiz.html">
+                Take Black Holes Module Quiz
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
 
 </body>
 

@@ -3,26 +3,757 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>IllustrisTNG</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <title>IllustrisTNG | Astrophysics Learning Platform</title>
+
+    <link rel="stylesheet" href="styles.css?v=99">
+
+    <style>
+        .course-layout {
+            display: flex !important;
+            align-items: flex-start;
+            gap: 24px;
+            width: 94%;
+            max-width: 1200px;
+            margin: 28px auto;
+        }
+
+        .sidebar {
+            width: 250px !important;
+            min-width: 250px;
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar a {
+            display: block !important;
+            padding: 8px 10px;
+            margin: 6px 0;
+            color: #22314d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background: #edf4ff;
+        }
+
+        .content {
+            flex: 1;
+            background: white;
+            border-radius: 14px;
+            padding: 34px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .simulation-card {
+            background: #f3f7ff;
+            border-left: 5px solid #456ee8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        .science-card {
+            background: #f7f9ff;
+            border: 1px solid #d7e5ff;
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .process-list {
+            counter-reset: simulation-step;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .process-list li {
+            counter-increment: simulation-step;
+            background: #f7f9ff;
+            border: 1px solid #d7e5ff;
+            border-radius: 12px;
+            padding: 16px 16px 16px 58px;
+            margin: 14px 0;
+            position: relative;
+        }
+
+        .process-list li::before {
+            content: counter(simulation-step);
+            position: absolute;
+            left: 16px;
+            top: 15px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #123a7d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 850px) {
+            .course-layout {
+                display: block !important;
+            }
+
+            .sidebar {
+                width: auto !important;
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .science-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <h1>IllustrisTNG</h1>
+<nav class="top-nav">
 
-    <p>
-        IllustrisTNG is a large-scale simulation of the universe.
-    </p>
+    <div class="brand">
+        Astrophysics Learning Platform
+    </div>
 
-    <p>
-        Researchers use it to study galaxy formation,
-        dark matter, and cosmic evolution.
-    </p>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
 
-    <a href="index.html">
-        Back to Home
-    </a>
+</nav>
+
+<div class="course-layout">
+
+    <aside class="sidebar">
+
+        <h2>IllustrisTNG</h2>
+
+        <a href="#overview">Overview</a>
+        <a href="#lesson1">1. What Is IllustrisTNG?</a>
+        <a href="#lesson2">2. Cosmological Simulations</a>
+        <a href="#lesson3">3. Matter in the Simulation</a>
+        <a href="#lesson4">4. Galaxy Formation</a>
+        <a href="#lesson5">5. Feedback Processes</a>
+        <a href="#lesson6">6. Scientific Data</a>
+        <a href="#lesson7">7. Uses and Limitations</a>
+        <a href="#connections">Learning Connections</a>
+        <a href="#resources">External Resources</a>
+
+    </aside>
+
+    <main class="content">
+
+        <section id="overview">
+
+            <h1>
+                Research Tool: IllustrisTNG
+            </h1>
+
+            <p>
+                IllustrisTNG is a collection of large cosmological computer
+                simulations used to study how galaxies and cosmic structures
+                form and evolve.
+            </p>
+
+            <p>
+                Instead of observing only one real galaxy, researchers can use
+                the simulation to follow thousands of modeled galaxies across
+                billions of years of cosmic history.
+            </p>
+
+        </section>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>Type</h3>
+                <p>Cosmological simulation project</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Research Areas</h3>
+                <p>Galaxies, dark matter, gas, stars, and black holes</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Main Purpose</h3>
+                <p>Model the evolution of the universe</p>
+            </div>
+
+        </div>
+
+        <section id="lesson1">
+
+            <h2>
+                Lesson 1 — What Is IllustrisTNG?
+            </h2>
+
+            <p>
+                IllustrisTNG stands for Illustris: The Next Generation.
+                It is the successor to the original Illustris simulation
+                project.
+            </p>
+
+            <p>
+                The simulation begins with conditions representing the early
+                universe and calculates how matter changes over time under the
+                influence of gravity and other physical processes.
+            </p>
+
+            <p>
+                Researchers can examine the simulated universe at different
+                times, compare galaxies, track matter, and test explanations
+                for observed astronomical patterns.
+            </p>
+
+            <div class="simulation-card">
+
+                <strong>Key Idea:</strong>
+
+                IllustrisTNG is not an image or recording of the real universe.
+                It is a mathematical model generated by a computer using
+                physical laws and assumptions.
+
+            </div>
+
+        </section>
+
+        <section id="lesson2">
+
+            <h2>
+                Lesson 2 — How Cosmological Simulations Work
+            </h2>
+
+            <p>
+                A cosmological simulation divides a large region of space into
+                many computational elements. These elements represent matter
+                such as dark matter, gas, stars, and black holes.
+            </p>
+
+            <p>
+                The computer repeatedly calculates how these elements move and
+                interact as simulated time advances.
+            </p>
+
+            <ol class="process-list">
+
+                <li>
+                    Researchers define starting conditions based on models of
+                    the early universe.
+                </li>
+
+                <li>
+                    Gravity causes matter to gather into filaments, halos,
+                    galaxies, and clusters.
+                </li>
+
+                <li>
+                    Gas falls into dark matter halos and may cool enough to form
+                    stars.
+                </li>
+
+                <li>
+                    Stars, supernovae, and black holes return energy and matter
+                    to their surroundings.
+                </li>
+
+                <li>
+                    Scientists compare the resulting simulated universe with
+                    real astronomical observations.
+                </li>
+
+            </ol>
+
+        </section>
+
+        <section id="lesson3">
+
+            <h2>
+                Lesson 3 — Matter Represented in IllustrisTNG
+            </h2>
+
+            <div class="science-grid">
+
+                <div class="science-card">
+
+                    <h3>Dark Matter</h3>
+
+                    <p>
+                        Dark matter provides much of the gravitational framework
+                        in which galaxies form.
+                    </p>
+
+                    <p>
+                        It gathers into halos that attract ordinary matter and
+                        influence the motion and structure of galaxies.
+                    </p>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Gas</h3>
+
+                    <p>
+                        Gas can move, heat, cool, and become compressed.
+                        Dense, cool gas may form new stars.
+                    </p>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Stars</h3>
+
+                    <p>
+                        Individual stars are usually not modeled one by one.
+                        Instead, one star particle often represents an entire
+                        population of stars.
+                    </p>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Black Holes</h3>
+
+                    <p>
+                        The simulation includes modeled supermassive black holes
+                        that can grow by accreting matter and merging.
+                    </p>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Magnetic Fields</h3>
+
+                    <p>
+                        IllustrisTNG also includes magnetic fields, which can
+                        influence gas movement and energetic astrophysical
+                        processes.
+                    </p>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Heavy Elements</h3>
+
+                    <p>
+                        The simulation tracks chemical enrichment as stars
+                        produce and release heavier elements into space.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="lesson4">
+
+            <h2>
+                Lesson 4 — Modeling Galaxy Formation
+            </h2>
+
+            <p>
+                In the early universe, matter was distributed with small
+                variations in density. Regions containing slightly more matter
+                experienced stronger gravity and attracted additional material.
+            </p>
+
+            <p>
+                Dark matter gathered into halos. Ordinary gas fell into these
+                halos, became compressed, cooled, and formed stars.
+            </p>
+
+            <p>
+                Small early galaxies could merge and grow into larger systems.
+                Over billions of years, the simulation produces spiral,
+                elliptical, irregular, and other galaxy structures.
+            </p>
+
+            <h3>
+                Comparing Simulations with Observations
+            </h3>
+
+            <p>
+                Researchers compare simulated galaxies with real data such as:
+            </p>
+
+            <ul>
+                <li>Galaxy sizes</li>
+                <li>Galaxy shapes</li>
+                <li>Stellar masses</li>
+                <li>Star-formation rates</li>
+                <li>Gas content</li>
+                <li>Black-hole masses</li>
+                <li>Galaxy clustering</li>
+            </ul>
+
+            <p>
+                If the simulation consistently disagrees with observations,
+                scientists may need to improve the model or reconsider some of
+                its assumptions.
+            </p>
+
+        </section>
+
+        <section id="lesson5">
+
+            <h2>
+                Lesson 5 — Feedback from Stars and Black Holes
+            </h2>
+
+            <p>
+                One of the most important challenges in galaxy simulations is
+                modeling feedback.
+            </p>
+
+            <p>
+                Feedback occurs when stars, supernovae, or active black holes
+                release energy or matter into their surroundings.
+            </p>
+
+            <h3>
+                Stellar Feedback
+            </h3>
+
+            <p>
+                Young stars produce radiation and stellar winds. Supernova
+                explosions release energy and heavy elements.
+            </p>
+
+            <p>
+                These processes can heat or remove gas and reduce the amount
+                available for future star formation.
+            </p>
+
+            <h3>
+                Black-Hole Feedback
+            </h3>
+
+            <p>
+                Matter falling toward a supermassive black hole can power an
+                active galactic nucleus.
+            </p>
+
+            <p>
+                Energy from this activity can heat gas or push it away from the
+                galaxy, slowing the formation of new stars.
+            </p>
+
+            <div class="simulation-card">
+
+                <strong>Why feedback matters:</strong>
+
+                Without feedback, simulations may create galaxies that become
+                too massive or form too many stars compared with real galaxies.
+
+            </div>
+
+        </section>
+
+        <section id="lesson6">
+
+            <h2>
+                Lesson 6 — Working with IllustrisTNG Data
+            </h2>
+
+            <p>
+                IllustrisTNG produces large datasets describing the simulated
+                universe at many different moments in time.
+            </p>
+
+            <p>
+                Researchers can use snapshots, catalogs, visualizations, and
+                programming tools to study the data.
+            </p>
+
+            <h3>
+                Snapshots
+            </h3>
+
+            <p>
+                A snapshot stores the state of the simulation at a specific
+                cosmic time. It can include the positions, velocities,
+                temperatures, masses, and other properties of simulated matter.
+            </p>
+
+            <h3>
+                Group Catalogs
+            </h3>
+
+            <p>
+                Group catalogs organize matter into structures such as dark
+                matter halos, galaxies, and galaxy clusters.
+            </p>
+
+            <h3>
+                Merger Trees
+            </h3>
+
+            <p>
+                Merger trees allow researchers to follow how a galaxy changes
+                over time and identify the smaller systems that merged to form it.
+            </p>
+
+            <h3>
+                Scientific Questions
+            </h3>
+
+            <p>
+                A researcher might use TNG data to ask:
+            </p>
+
+            <ul>
+                <li>How does a galaxy's environment affect its shape?</li>
+                <li>When did a particular galaxy stop forming stars?</li>
+                <li>How do black holes and galaxies grow together?</li>
+                <li>How is gas distributed around galaxies?</li>
+                <li>How often do major galaxy mergers occur?</li>
+            </ul>
+
+        </section>
+
+        <section id="lesson7">
+
+            <h2>
+                Lesson 7 — Uses and Limitations
+            </h2>
+
+            <h3>
+                Uses
+            </h3>
+
+            <ul>
+                <li>
+                    Testing theories of galaxy formation
+                </li>
+
+                <li>
+                    Studying dark matter halos
+                </li>
+
+                <li>
+                    Following galaxy mergers
+                </li>
+
+                <li>
+                    Investigating star-formation history
+                </li>
+
+                <li>
+                    Studying feedback from supermassive black holes
+                </li>
+
+                <li>
+                    Comparing simulated observations with telescope data
+                </li>
+            </ul>
+
+            <h3>
+                Limitations
+            </h3>
+
+            <p>
+                A simulation cannot model every atom, star, or physical process
+                directly. Some processes occur on scales smaller than the
+                simulation can resolve.
+            </p>
+
+            <p>
+                Researchers therefore use simplified mathematical rules called
+                subgrid models for processes such as star formation and black-hole
+                feedback.
+            </p>
+
+            <p>
+                Simulation results depend on assumptions, numerical methods,
+                resolution, and available computing power.
+            </p>
+
+            <div class="warning-callout">
+
+                <strong>Important:</strong>
+
+                A successful simulation does not prove that every detail of its
+                model is correct. It shows that the model can reproduce certain
+                observed patterns and can be used to make testable predictions.
+
+            </div>
+
+        </section>
+
+        <section id="connections">
+
+            <h2>
+                Connections to Your Learning Modules
+            </h2>
+
+            <div class="science-grid">
+
+                <div class="science-card">
+
+                    <h3>Stars</h3>
+
+                    <p>
+                        TNG models star formation, stellar populations,
+                        supernova feedback, and chemical enrichment.
+                    </p>
+
+                    <a href="stars.html">
+                        Review Stars Module
+                    </a>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Black Holes</h3>
+
+                    <p>
+                        The simulation tracks the growth and feedback of
+                        supermassive black holes.
+                    </p>
+
+                    <a href="blackholes.html">
+                        Review Black Holes Module
+                    </a>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Galaxies</h3>
+
+                    <p>
+                        TNG is mainly used to investigate galaxy formation,
+                        mergers, dark matter, gas, and cosmic evolution.
+                    </p>
+
+                    <a href="galaxies.html">
+                        Review Galaxies Module
+                    </a>
+
+                </div>
+
+                <div class="science-card">
+
+                    <h3>Computational Science</h3>
+
+                    <p>
+                        IllustrisTNG demonstrates how programming, mathematics,
+                        physics, and high-performance computing work together in
+                        modern astrophysics.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="resources">
+
+            <h2>
+                External Resources
+            </h2>
+
+            <div class="resource-list">
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.tng-project.org/"
+                            target="_blank"
+                        >
+                            Official IllustrisTNG Project
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.tng-project.org/data/"
+                            target="_blank"
+                        >
+                            IllustrisTNG Public Data Access
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.tng-project.org/explore/"
+                            target="_blank"
+                        >
+                            IllustrisTNG Data Explorer
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.tng-project.org/media/"
+                            target="_blank"
+                        >
+                            IllustrisTNG Visualizations and Media
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://openstax.org/books/astronomy-2e/pages/28-4-the-evolution-and-distribution-of-galaxies"
+                            target="_blank"
+                        >
+                            OpenStax Astronomy — Galaxy Evolution
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <div class="button-row">
+
+            <a
+                class="button secondary-button"
+                href="athena.html"
+            >
+                Previous Research Tool: Athena
+            </a>
+
+            <a
+                class="button"
+                href="index.html"
+            >
+                Return to Homepage
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
 
 </body>
 

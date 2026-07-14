@@ -4,80 +4,382 @@
 <head>
     <meta charset="UTF-8">
     <title>Astrophysics Learning Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=99">
+    <style>
+    body {
+        margin: 0 !important;
+        background: #eef3fb !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    .home-container {
+        width: 92% !important;
+        max-width: 1100px !important;
+        margin: 0 auto !important;
+        padding: 35px 0 60px !important;
+        text-align: center !important;
+    }
+
+    .home-container h1,
+    .home-container h2,
+    .home-container h3,
+    .home-container p {
+        text-align: center !important;
+    }
+
+    .dashboard {
+        width: 100% !important;
+        margin: 35px auto !important;
+        padding: 28px !important;
+        background: white !important;
+        border-radius: 18px !important;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1) !important;
+        text-align: center !important;
+    }
+
+    .xp-bar-container {
+        width: 90% !important;
+        height: 26px !important;
+        margin: 15px auto !important;
+        background: #dfe5f2 !important;
+        border-radius: 999px !important;
+        overflow: hidden !important;
+        border: 1px solid #c5cfe3 !important;
+    }
+
+    .xp-bar-fill {
+        width: 3%;
+        min-width: 8px;
+        height: 100% !important;
+        background: linear-gradient(90deg, #4f7cff, #9b5cff) !important;
+        border-radius: 999px !important;
+        transition: width 0.5s ease !important;
+    }
+
+    .progress-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 16px !important;
+        margin-top: 24px !important;
+    }
+
+    .progress-card {
+        background: #f7f9ff !important;
+        border: 1px solid #d7e5ff !important;
+        border-radius: 15px !important;
+        padding: 20px !important;
+        text-align: center !important;
+    }
+
+    .module-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 22px !important;
+        margin: 24px auto !important;
+    }
+
+    .module-card {
+        background: white !important;
+        border: 1px solid #d7e5ff !important;
+        border-radius: 16px !important;
+        padding: 25px !important;
+        text-align: center !important;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .module-card p {
+        text-align: center !important;
+    }
+
+    .astrobot-section {
+        background: white !important;
+        border-radius: 18px !important;
+        padding: 28px !important;
+        margin: 40px auto !important;
+        text-align: center !important;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .chat-controls {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        flex-wrap: wrap !important;
+    }
+
+    #userQuestion {
+        width: 500px !important;
+        max-width: 85% !important;
+        padding: 12px !important;
+    }
+
+    #response {
+        width: 90% !important;
+        max-width: 800px !important;
+        min-height: 50px !important;
+        margin: 18px auto !important;
+        padding: 16px !important;
+        background: #f7f9ff !important;
+        border: 1px solid #d7e5ff !important;
+        border-radius: 12px !important;
+        text-align: left !important;
+    }
+
+    .feature-list {
+        display: inline-block !important;
+        text-align: left !important;
+        margin: 0 auto !important;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    @media (max-width: 800px) {
+        .progress-grid,
+        .module-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
 </head>
 
 <body>
 
+<main class="home-container">
+
     <h1>Astrophysics Learning Platform</h1>
 
     <p>
-        Learn astrophysics concepts and explore tools used by researchers.
+        Explore structured astrophysics lessons, complete interactive quizzes,
+        track your progress, and ask AstroBot questions about the universe.
     </p>
 
-   <h2>Topics</h2>
+    <!-- PROGRESS DASHBOARD -->
 
-<ul>
-    <li>
-        <a href="whatisastrophysics.html">What is Astrophysics?</a>
-    </li>
+<section class="dashboard">
 
-    <li>
-        <a href="stars.html">Stars</a>
-    </li>
+    <h2>Your Learning Progress</h2>
 
-    <li>
-        <a href="blackholes.html">Black Holes</a>
-    </li>
+    <h3 id="xpDisplay">0 XP</h3>
 
-    <li>
-        <a href="galaxies.html">Galaxies</a>
-    </li>
-</ul>
+    <div class="xp-bar-container">
+        <div id="xpBarFill" class="xp-bar-fill"></div>
+    </div>
 
-    <h2>Research Tools</h2>
+    <p id="xpLevelText">Level 1 — 0 / 100 XP</p>
 
-    <ul>
-        <li>
-            <a href="athena.html">Athena</a>
-        </li>
+    <div class="progress-grid">
 
-        <li>
-            <a href="tng.html">IllustrisTNG</a>
-        </li>
-    </ul>
+        <div class="progress-card">
+            <h3>Stars</h3>
+            <p id="starsProgress">Not completed</p>
+        </div>
 
-<h2>AstroBot (Prototype)</h2>
+        <div class="progress-card">
+            <h3>Black Holes</h3>
+            <p id="blackHolesProgress">Not completed</p>
+        </div>
 
-<p>
-    Ask any astrophysics question below.
-</p>
+        <div class="progress-card">
+            <h3>Galaxies</h3>
+            <p id="galaxiesProgress">Not completed</p>
+        </div>
 
-<input
-    type="text"
-    id="userQuestion"
-    placeholder="Example: What is a black hole?"
->
+        <div class="progress-card">
+            <h3>Badges</h3>
+            <div id="badgeDisplay">No badges yet</div>
+        </div>
 
-<button onclick="askGemini()">
-    Ask
-</button>
+    </div>
 
-<p><strong>Answer:</strong></p>
+</section>
 
-<p id="response">
-    Your answer will appear here.
-</p>
+    <!-- TOPICS -->
 
-<h2>Future Features</h2>
+    <section>
 
-<ul>
-    <li>Learning Progress Tracking</li>
-    <li>Achievement Badges</li>
-    <li>Daily Streaks</li>
-</ul>
+        <h2>Learning Modules</h2>
 
-    <script src="script.js"></script>
+        <div class="module-grid">
+
+            <div class="module-card">
+                <h3>What Is Astrophysics?</h3>
+
+                <p>
+                    Learn how physics is used to study stars, planets,
+                    galaxies, black holes, and the universe.
+                </p>
+
+                <a class="button" href="whatisastrophysics.html">
+                    Open Module
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Stars</h3>
+
+                <p>
+                    Study stellar structure, nuclear fusion, classification,
+                    hydrostatic equilibrium, and stellar evolution.
+                </p>
+
+                <a class="button" href="stars.html">
+                    Open Module
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Black Holes</h3>
+
+                <p>
+                    Explore spacetime, event horizons, accretion disks,
+                    gravitational waves, and black-hole detection.
+                </p>
+
+                <a class="button" href="blackholes.html">
+                    Open Module
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Galaxies</h3>
+
+                <p>
+                    Learn about galaxy structure, classification,
+                    dark matter, evolution, and galaxy interactions.
+                </p>
+
+                <a class="button" href="galaxies.html">
+                    Open Module
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESEARCH TOOLS -->
+
+    <section>
+
+        <h2>Research Tools</h2>
+
+        <div class="module-grid">
+
+            <div class="module-card">
+                <h3>Athena</h3>
+
+                <p>
+                    Explore the planned X-ray observatory designed to study
+                    black holes, hot gas, and high-energy astrophysics.
+                </p>
+
+                <a class="button" href="athena.html">
+                    Explore Athena
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>IllustrisTNG</h3>
+
+                <p>
+                    Learn how scientists use large computer simulations
+                    to study galaxy formation and cosmic evolution.
+                </p>
+
+                <a class="button" href="tng.html">
+                    Explore IllustrisTNG
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ASTROBOT -->
+
+    <section class="astrobot-section">
+
+        <h2>AstroBot</h2>
+
+        <p>
+            Ask an astrophysics question at a high-school or introductory-college level.
+        </p>
+
+        <div class="chat-controls">
+
+            <input
+                type="text"
+                id="userQuestion"
+                placeholder="Example: Why do massive stars have shorter lifetimes?"
+            >
+
+            <button
+                class="button"
+                type="button"
+                onclick="askGemini()"
+            >
+                Ask AstroBot
+            </button>
+
+        </div>
+
+        <h3>Answer</h3>
+
+        <div id="response">
+            Ask a question to begin.
+        </div>
+
+        <!-- ROCKET GAME -->
+
+        <div id="rocketGame" class="rocket-game hidden">
+
+            <h3>AstroBot is thinking — avoid the asteroids!</h3>
+
+            <canvas
+                id="gameCanvas"
+                width="600"
+                height="260"
+            ></canvas>
+
+            <p>
+                Use the left and right arrow keys.
+                Score: <span id="gameScore">0</span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CURRENT FEATURES -->
+
+    <section>
+
+        <h2>Platform Features</h2>
+
+        <ul class="feature-list">
+            <li>Structured astrophysics learning modules</li>
+            <li>Interactive quizzes with automatic grading</li>
+            <li>Explanations for correct and incorrect answers</li>
+            <li>Recommended lesson-review links</li>
+            <li>Progress tracking and quiz-score storage</li>
+            <li>XP points and achievement badges</li>
+            <li>AI-powered astrophysics support through AstroBot</li>
+        </ul>
+
+    </section>
+
+</main>
+
+<script src="progress.js?v=101"></script>
+<script src="game.js?v=101"></script>
+<script src="script.js?v=102"></script>
+
+<script>
+    loadProgressDashboard();
+</script>
 
 </body>
 

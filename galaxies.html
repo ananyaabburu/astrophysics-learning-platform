@@ -3,41 +3,702 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Galaxies</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Module 3: Galaxies | Astrophysics Learning Platform</title>
+    <link rel="stylesheet" href="styles.css?v=99">
+
+    <style>
+        .course-layout {
+            display: flex !important;
+            align-items: flex-start;
+            gap: 24px;
+            width: 94%;
+            max-width: 1200px;
+            margin: 28px auto;
+        }
+
+        .sidebar {
+            width: 250px !important;
+            min-width: 250px;
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar a {
+            display: block !important;
+            padding: 8px 10px;
+            margin: 6px 0;
+            color: #22314d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background: #edf4ff;
+        }
+
+        .content {
+            flex: 1;
+            background: white;
+            border-radius: 14px;
+            padding: 34px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-image {
+            display: block;
+            width: 70% !important;
+            max-width: 480px !important;
+            height: auto;
+            margin: 20px auto 8px;
+            border-radius: 10px;
+        }
+
+        .image-placeholder {
+            width: 70%;
+            max-width: 480px;
+            min-height: 220px;
+            margin: 20px auto 8px;
+            padding: 30px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0b163c, #502a76);
+            color: white;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (max-width: 850px) {
+            .course-layout {
+                display: block !important;
+            }
+
+            .sidebar {
+                width: 100% !important;
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .lesson-image,
+            .image-placeholder {
+                width: 100% !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Galaxies</h1>
+<nav class="top-nav">
+    <div class="brand">Astrophysics Learning Platform</div>
 
-    <p>
-        A galaxy is a massive collection of stars, gas, dust, and dark matter held together by gravity.
-    </p>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="stars.html">Stars</a>
+        <a href="blackholes.html">Black Holes</a>
+        <a href="galaxies.html">Galaxies</a>
+    </div>
+</nav>
 
-    <h2>The Milky Way</h2>
+<div class="course-layout">
 
-    <p>
-        Earth is located within the Milky Way galaxy, which contains hundreds of billions of stars.
-    </p>
+    <aside class="sidebar">
+        <h2>Module 3: Galaxies</h2>
 
-    <h2>Types of Galaxies</h2>
+        <a href="#overview">Overview</a>
+        <a href="#lesson1">1. What Is a Galaxy?</a>
+        <a href="#lesson2">2. Galaxy Classification</a>
+        <a href="#lesson3">3. The Milky Way</a>
+        <a href="#lesson4">4. Dark Matter</a>
+        <a href="#lesson5">5. Galaxy Formation</a>
+        <a href="#lesson6">6. Collisions and Mergers</a>
+        <a href="#lesson7">7. Active Galaxies</a>
+        <a href="#research">Real Research</a>
+        <a href="#videos">Videos</a>
+        <a href="#resources">Resources</a>
 
-    <ul>
-        <li>Spiral Galaxies</li>
-        <li>Elliptical Galaxies</li>
-        <li>Irregular Galaxies</li>
-    </ul>
+        <a class="quiz-link" href="galaxiesquiz.html">
+            Take Module Quiz
+        </a>
+    </aside>
 
-    <h2>Interesting Facts</h2>
+    <main class="content">
 
-    <ul>
-        <li>There are billions of galaxies in the observable universe.</li>
-        <li>Galaxies can collide and merge.</li>
-        <li>The Milky Way is a spiral galaxy.</li>
-    </ul>
+        <section class="hero" id="overview">
+            <h1>Module 3: Galaxies</h1>
 
-    <a href="index.html">Back to Home</a>
+            <p>
+                Galaxies are enormous gravitational systems containing stars,
+                stellar remnants, gas, dust, dark matter, and often a
+                supermassive black hole. Studying galaxies helps astronomers
+                understand how matter is organized and how the universe has
+                changed over billions of years.
+            </p>
+        </section>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>Estimated Time</h3>
+                <p>40–50 minutes</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Difficulty</h3>
+                <p>High School / Introductory College</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Prerequisites</h3>
+                <p>Gravity, stars, light, and basic cosmology</p>
+            </div>
+
+        </div>
+
+        <section class="callout">
+
+            <h2>Learning Objectives</h2>
+
+            <p>After completing this module, you should be able to:</p>
+
+            <ul>
+                <li>Explain what components make up a galaxy.</li>
+                <li>Compare spiral, elliptical, lenticular, and irregular galaxies.</li>
+                <li>Describe the major structures of the Milky Way.</li>
+                <li>Explain why astronomers infer that galaxies contain dark matter.</li>
+                <li>Describe how galaxies form and evolve.</li>
+                <li>Explain what occurs during galaxy collisions and mergers.</li>
+                <li>Describe active galactic nuclei and quasars.</li>
+            </ul>
+
+        </section>
+
+        <section id="lesson1">
+
+            <h2>Lesson 1 — What Is a Galaxy?</h2>
+
+            <p>
+                A galaxy is a gravitationally bound system containing stars,
+                gas, dust, stellar remnants, dark matter, and other objects.
+                Galaxies vary greatly in size. Small dwarf galaxies may contain
+                millions of stars, while giant galaxies may contain trillions.
+            </p>
+
+            <p>
+                Visible matter represents only part of a galaxy's total mass.
+                Astronomers infer that most galaxies are surrounded by much
+                larger halos of invisible dark matter. The gravity of this dark
+                matter affects the motion of stars and gas.
+            </p>
+
+            <p>
+                Galaxies are not distributed randomly. Many belong to groups,
+                clusters, and even larger structures called superclusters.
+                Between these large concentrations are enormous regions with
+                relatively little matter called cosmic voids.
+            </p>
+
+            <img
+                class="lesson-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Messier_81_HST.jpg"
+                alt="Spiral galaxy Messier 81"
+                onerror="this.style.display='none'; document.getElementById('galaxyFallback1').style.display='flex';"
+            >
+
+            <div id="galaxyFallback1" class="image-placeholder">
+                Galaxy image unavailable. Visit the external NASA and ESA
+                resources at the bottom of this module.
+            </div>
+
+            <p class="caption">
+                Spiral galaxy Messier 81. Image credit: NASA, ESA, and the Hubble Heritage Team.
+            </p>
+
+        </section>
+
+        <section id="lesson2">
+
+            <h2>Lesson 2 — Galaxy Classification</h2>
+
+            <p>
+                Astronomers classify galaxies mainly by their visible shape,
+                or morphology. Edwin Hubble developed an influential
+                classification system that separated galaxies into elliptical,
+                spiral, barred spiral, and irregular categories.
+            </p>
+
+            <h3>Spiral Galaxies</h3>
+
+            <p>
+                Spiral galaxies contain a flattened rotating disk, a central
+                bulge, spiral arms, and a surrounding halo. The spiral arms
+                often contain gas, dust, and regions of active star formation.
+                Young, hot, blue stars make many spiral arms appear bright.
+            </p>
+
+            <h3>Barred Spiral Galaxies</h3>
+
+            <p>
+                In a barred spiral galaxy, stars form a bar-shaped structure
+                across the central region. Spiral arms extend from the ends of
+                the bar. The Milky Way is classified as a barred spiral galaxy.
+            </p>
+
+            <h3>Elliptical Galaxies</h3>
+
+            <p>
+                Elliptical galaxies range from nearly spherical to strongly
+                elongated. They usually contain less cold gas and dust than
+                spiral galaxies, so they tend to form fewer new stars.
+                Their stellar populations are often older.
+            </p>
+
+            <h3>Lenticular Galaxies</h3>
+
+            <p>
+                Lenticular galaxies have a disk and central bulge but lack
+                prominent spiral arms. They are sometimes described as an
+                intermediate form between spiral and elliptical galaxies.
+            </p>
+
+            <h3>Irregular Galaxies</h3>
+
+            <p>
+                Irregular galaxies do not have a clear spiral or elliptical
+                structure. Their unusual shapes may result from gravitational
+                interactions, mergers, or strong episodes of star formation.
+            </p>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <tr>
+                        <th>Galaxy Type</th>
+                        <th>Main Features</th>
+                        <th>Typical Star Formation</th>
+                    </tr>
+
+                    <tr>
+                        <td>Spiral</td>
+                        <td>Disk, bulge, spiral arms, halo</td>
+                        <td>Often active in spiral arms</td>
+                    </tr>
+
+                    <tr>
+                        <td>Barred Spiral</td>
+                        <td>Central bar with spiral arms</td>
+                        <td>Often active in disk and arms</td>
+                    </tr>
+
+                    <tr>
+                        <td>Elliptical</td>
+                        <td>Smooth, rounded or elongated shape</td>
+                        <td>Usually lower</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lenticular</td>
+                        <td>Disk and bulge with weak or absent arms</td>
+                        <td>Usually limited</td>
+                    </tr>
+
+                    <tr>
+                        <td>Irregular</td>
+                        <td>No regular overall shape</td>
+                        <td>Can be very active</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="lesson3">
+
+            <h2>Lesson 3 — The Milky Way</h2>
+
+            <p>
+                The Milky Way is the galaxy containing the Solar System. It is
+                a barred spiral galaxy with a disk roughly 100,000 light-years
+                across. The exact size depends on how astronomers define the
+                faint outer regions and dark matter halo.
+            </p>
+
+            <h3>Galactic Disk</h3>
+
+            <p>
+                The disk contains most of the Milky Way's gas, dust, and spiral
+                structure. It also contains many young stars and star-forming
+                regions. The Solar System lies within the disk in a smaller
+                feature called the Orion Spur.
+            </p>
+
+            <h3>Central Bulge and Bar</h3>
+
+            <p>
+                The central region contains a dense concentration of stars and
+                a bar-shaped structure. At the center is Sagittarius A*, a
+                supermassive black hole with a mass of roughly four million Suns.
+            </p>
+
+            <h3>Stellar Halo</h3>
+
+            <p>
+                The stellar halo surrounds the disk and contains old stars and
+                globular clusters. Globular clusters are tightly packed groups
+                containing thousands to millions of stars.
+            </p>
+
+            <h3>Dark Matter Halo</h3>
+
+            <p>
+                A much larger dark matter halo surrounds the visible galaxy.
+                Although dark matter does not emit light, its gravity strongly
+                influences the motion of stars, gas, and satellite galaxies.
+            </p>
+
+        </section>
+
+        <section id="lesson4">
+
+            <h2>Lesson 4 — Dark Matter and Galaxy Rotation</h2>
+
+            <p>
+                Astronomers can estimate a galaxy's mass by measuring how
+                quickly stars and gas orbit its center. If most mass were
+                concentrated in the visible central regions, orbital speeds
+                should decrease significantly at large distances.
+            </p>
+
+            <p>
+                Instead, observations show that stars and gas in the outer
+                regions of many galaxies continue orbiting at unexpectedly high
+                speeds. These measurements create nearly flat galaxy rotation
+                curves.
+            </p>
+
+            <p>
+                One major explanation is that galaxies are surrounded by large
+                halos of dark matter. This invisible material provides
+                additional gravity without producing detectable light.
+            </p>
+
+            <div class="callout">
+                <h3>What is dark matter?</h3>
+
+                <p>
+                    Dark matter is a proposed form of matter that interacts
+                    gravitationally but does not emit, absorb, or reflect
+                    enough electromagnetic radiation to be directly observed.
+                    Its exact particle nature remains unknown.
+                </p>
+            </div>
+
+            <p>
+                Other evidence for dark matter includes gravitational lensing,
+                galaxy-cluster motion, the cosmic microwave background, and the
+                growth of large-scale structure.
+            </p>
+
+        </section>
+
+        <section id="lesson5">
+
+            <h2>Lesson 5 — Galaxy Formation and Evolution</h2>
+
+            <p>
+                Galaxies began forming from small density variations in the
+                early universe. Regions containing slightly more matter than
+                average experienced stronger gravity and attracted additional
+                matter.
+            </p>
+
+            <p>
+                Dark matter formed gravitational structures into which ordinary
+                gas could fall. As gas cooled and became denser, it formed
+                stars and early galaxies.
+            </p>
+
+            <h3>Star Formation and Feedback</h3>
+
+            <p>
+                Galaxy evolution depends on a balance between gas entering the
+                galaxy, gas forming stars, and energy being returned to the
+                surrounding environment. Supernovae, stellar winds, and active
+                galactic nuclei can heat or remove gas.
+            </p>
+
+            <p>
+                These feedback processes can reduce future star formation.
+                Without feedback, computer simulations often predict galaxies
+                that form too many stars too quickly.
+            </p>
+
+            <h3>Environmental Effects</h3>
+
+            <p>
+                A galaxy's environment can affect its evolution. In dense galaxy
+                clusters, interactions with hot gas and neighboring galaxies can
+                remove a galaxy's cold gas or alter its shape.
+            </p>
+
+        </section>
+
+        <section id="lesson6">
+
+            <h2>Lesson 6 — Galaxy Collisions and Mergers</h2>
+
+            <p>
+                Galaxies can collide because gravity changes their paths.
+                Although the word collision sounds destructive, individual
+                stars usually do not collide because the distances between
+                stars are enormous.
+            </p>
+
+            <p>
+                Gas clouds can interact more directly. These interactions may
+                compress gas and trigger intense bursts of star formation.
+                Tidal forces can stretch galaxies and create long tails of
+                stars and gas.
+            </p>
+
+            <p>
+                During a major merger, two galaxies may combine into one larger
+                system. Mergers can transform spiral galaxies, change stellar
+                orbits, fuel central black holes, and sometimes produce
+                elliptical galaxies.
+            </p>
+
+            <img
+                class="lesson-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6f/NGC_4038_4039_Hubble.jpg"
+                alt="The Antennae Galaxies"
+                onerror="this.style.display='none'; document.getElementById('galaxyFallback2').style.display='flex';"
+            >
+
+            <div id="galaxyFallback2" class="image-placeholder">
+                Galaxy-merger image unavailable. Visit the NASA or ESA/Hubble
+                resource links below.
+            </div>
+
+            <p class="caption">
+                The Antennae Galaxies, an interacting galaxy pair. Image credit: NASA, ESA, and the Hubble Heritage Team.
+            </p>
+
+            <div class="warning-callout">
+                <b>Important:</b> Galaxy mergers usually occur over hundreds of
+                millions of years rather than as a sudden single event.
+            </div>
+
+        </section>
+
+        <section id="lesson7">
+
+            <h2>Lesson 7 — Active Galaxies and Quasars</h2>
+
+            <p>
+                Some galaxies contain extremely bright central regions called
+                active galactic nuclei, or AGN. Their energy comes from matter
+                falling toward a supermassive black hole.
+            </p>
+
+            <p>
+                Gas in the accretion disk becomes extremely hot and releases
+                enormous amounts of radiation before crossing the event horizon.
+                In some cases, the central region can outshine the combined
+                starlight of the entire galaxy.
+            </p>
+
+            <h3>Quasars</h3>
+
+            <p>
+                Quasars are especially luminous active galactic nuclei. Because
+                many quasars are extremely distant, astronomers observe them as
+                they existed billions of years ago.
+            </p>
+
+            <h3>Radio Galaxies and Jets</h3>
+
+            <p>
+                Some active galaxies produce powerful relativistic jets.
+                Charged particles moving through magnetic fields emit radiation,
+                creating enormous radio-emitting structures extending far beyond
+                the visible galaxy.
+            </p>
+
+            <p>
+                Not every galaxy with a supermassive black hole is currently
+                active. The black hole must have a sufficient supply of nearby
+                material to produce a luminous accretion disk.
+            </p>
+
+        </section>
+
+        <section id="research">
+
+            <h2>Real Research Connections</h2>
+
+            <ul>
+                <li>
+                    <b>Hubble Space Telescope:</b>
+                    Studies galaxy morphology, collisions, star formation, and
+                    distant galaxies.
+                </li>
+
+                <li>
+                    <b>James Webb Space Telescope:</b>
+                    Observes early galaxies in infrared light and investigates
+                    how the first galaxies formed.
+                </li>
+
+                <li>
+                    <b>ESA Gaia Mission:</b>
+                    Maps the positions and motions of stars throughout the
+                    Milky Way.
+                </li>
+
+                <li>
+                    <b>IllustrisTNG:</b>
+                    Uses large computer simulations to model galaxy formation,
+                    dark matter, gas, stars, and black holes.
+                </li>
+
+                <li>
+                    <b>Sloan Digital Sky Survey:</b>
+                    Collects images and spectra for millions of astronomical
+                    objects, including galaxies.
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="videos">
+
+            <h2>Recommended Videos</h2>
+
+            <div class="resource-list">
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/watch?v=I82ADyJC7wE"
+                            target="_blank"
+                        >
+                            Crash Course Astronomy: Galaxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@NASA"
+                            target="_blank"
+                        >
+                            NASA Video Resources
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@pbsspacetime"
+                            target="_blank"
+                        >
+                            PBS Space Time
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@DrBecky"
+                            target="_blank"
+                        >
+                            Dr. Becky Astronomy Videos
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section id="resources">
+
+            <h2>External Resources</h2>
+
+            <div class="resource-list">
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://science.nasa.gov/universe/galaxies/"
+                            target="_blank"
+                        >
+                            NASA — Galaxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://science.nasa.gov/universe/galaxies/milky-way/"
+                            target="_blank"
+                        >
+                            NASA — The Milky Way
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://openstax.org/books/astronomy-2e/pages/26-introduction"
+                            target="_blank"
+                        >
+                            OpenStax Astronomy — Galaxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://esahubble.org/science/galaxies/"
+                            target="_blank"
+                        >
+                            ESA/Hubble — Galaxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.tng-project.org/"
+                            target="_blank"
+                        >
+                            IllustrisTNG Project
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <div class="button-row">
+
+            <a class="button secondary-button" href="blackholes.html">
+                Previous Module: Black Holes
+            </a>
+
+            <a class="button" href="galaxiesquiz.html">
+                Take Galaxies Module Quiz
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
 
 </body>
 
