@@ -1,4 +1,4 @@
-const API_KEY = "PUTAPIHERE";
+const API_KEY = "APIHERE;
 
 async function askGemini() {
     const questionInput = document.getElementById("userQuestion");

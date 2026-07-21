@@ -136,6 +136,33 @@
         display: none !important;
     }
 
+    .play-game-button {
+    margin: 18px auto !important;
+    padding: 13px 24px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    background: linear-gradient(90deg, #4f7cff, #9b5cff) !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease !important;
+}
+
+.play-game-button:hover {
+    transform: scale(1.05) !important;
+}
+
+.rocket-game {
+    width: 100% !important;
+    margin: 25px auto !important;
+    text-align: center !important;
+}
+
+#gameCanvas {
+    max-width: 100% !important;
+    border-radius: 12px !important;
+}
     @media (max-width: 800px) {
         .progress-grid,
         .module-grid {
@@ -328,15 +355,33 @@
 
         <h3>Answer</h3>
 
-        <div id="response">
-            Ask a question to begin.
-        </div>
+       <div id="response">
+    Ask a question to begin.
+</div>
 
-        <!-- ROCKET GAME -->
+<button
+    class="play-game-button"
+    type="button"
+    onclick="playAsteroidGame()"
+>
+    🚀 Play Asteroid Game
+</button>
+
+<button
+    class="play-game-button"
+    type="button"
+    onclick="stopRocketGame()"
+>
+    🛑 Stop Game
+</button>
+
+<!-- ROCKET GAME -->
 
         <div id="rocketGame" class="rocket-game hidden">
 
-            <h3>AstroBot is thinking — avoid the asteroids!</h3>
+            <h3 id="gameHeading">
+    AstroBot is thinking — avoid the asteroids!
+</h3>
 
             <canvas
                 id="gameCanvas"
@@ -379,6 +424,23 @@
 
 <script>
     loadProgressDashboard();
+
+    function playAsteroidGame() {
+        const gameContainer = document.getElementById("rocketGame");
+        const gameHeading = document.getElementById("gameHeading");
+
+        gameContainer.classList.remove("hidden");
+
+        gameHeading.textContent =
+            "Dodge the asteroids and survive as long as possible!";
+
+        gameContainer.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        startRocketGame();
+    }
 </script>
 
 </body>
